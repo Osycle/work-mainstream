@@ -1,0 +1,123 @@
+/* 
+		_footer.scss
+*/
+
+/*
+										---FOOTER---
+*/
+
+
+
+#footer{
+	position: relative;
+	//color: rgba(black, 0.4);
+	//min-height: 150px;
+	line-height: 170%;
+	background-repeat: no-repeat;
+	background-position-y: center;
+	background-size: cover;
+	&:before{
+		font-size: 150px;
+		position: absolute;
+		top: 0 ;
+	}
+}
+.footer-content{
+	.ls-icon-placeholder{
+		&:before{
+			font-size: 350px;
+    	position: absolute;
+    	top: 0;
+    	color: rgba(white, 0.05);
+    	line-height: 100%;
+		}
+	}
+	@media (max-width: 991px) {
+		.container{
+			padding-bottom: 0;
+		}
+		.align-center{
+			flex-direction: column;
+		}
+	}
+}
+.footer-contacts{
+	[class*="ls-icon-"]{
+		color: $color-1;
+	}
+	@media (max-width: 991px) {
+		.flex.align-i-center{
+    	flex-direction: column;
+		}
+		.header-phone-icon{
+			margin-bottom: 15px;
+		}
+	}
+}
+.socicons{
+	font-size: 20px;
+	li{
+		margin: 0 5px;
+		display: inline-block;
+		border: 1px solid white;
+		width: 30px;
+		height: 30px;
+		text-align: center;
+		border-radius: 3px;
+		&:last-child{
+			margin-right: 0;
+		}
+		a{
+			display: flex;
+			height: 100%;
+			align-items: center;
+			i{
+				width: 100%;
+			}
+		}
+		&:hover{
+			background-color: $color-1;
+			border-color: $color-2;
+			color: $color-2;
+		}
+	}
+	.fa-paper-plane{
+		font-size: 14px;
+	}
+	.fa-vk{
+		font-size: 15px;
+	}
+	.fa-facebook{
+		font-size: 16px;
+	}
+}
+
+
+
+.input-icon{
+	position: relative;
+  display: flex;
+  align-items: center;
+  input{
+  	padding-right: 30px;
+  	padding-left: 30px;
+  }
+	[class*="ls-icon"]{
+		position: absolute;
+		padding:0 10px;
+	}
+}
+
+
+
+
+.copy-content{
+	background-color: $color-gray-3;
+	@media (max-width: 991px) {
+		margin-top: 15px;
+	}
+}
+.dev{
+	font-size: 0.9em;
+}
+
