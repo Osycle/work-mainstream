@@ -26,13 +26,29 @@ $bg-color-black: #000;
 $bg-color-gray: $color-gray-3;
 
 /* Дополнительные цвета разделов */
-$color-training: #f66729;
 $color-it: #14a6bc;
-$color-health: #80c52c;
-$color-self: #7915e6;
-$color-music: #cf256a;
-$color-cybersport: #155bc4;
 $color-career: #fcca01;
+$color-cybersport: #155bc4;
+$color-music: #cf256a;
+$color-self: #7915e6;
+$color-health: #80c52c;
+$color-training: #f66729;
+
+.color-it{color: $color-it;}
+.color-career{color: $color-career;}
+.color-cybersport{color: $color-cybersport;}
+.color-music{color: $color-music;}
+.color-self{color: $color-self;}
+.color-health{color: $color-health;}
+.color-training{color: $color-training;}
+
+.bg-color-it{background-color: $color-it;}
+.bg-color-career{background-color: $color-career;}
+.bg-color-cybersport{background-color: $color-cybersport;}
+.bg-color-music{background-color: $color-music;}
+.bg-color-self{background-color: $color-self;}
+.bg-color-health{background-color: $color-health;}
+.bg-color-training{background-color: $color-training;}
 
 
 
@@ -481,7 +497,7 @@ table {
 		display: flex;
 		align-items: center;
 		pointer-events: none;
-		background-color: rgba($color-1, 0.7);
+		background-color: rgba(black, 0.4);
 		color: white;
 		opacity: 0;
 		transition: all 0.3s ease-in-out;
@@ -942,7 +958,7 @@ main{
 	//overflow: hidden;
 	position: relative;
 	overflow: hidden;
-	//min-height: 300px;
+	min-height: 300px;
 	z-index: 1;
 	color: #282828;
 	@extend .list-style-1;

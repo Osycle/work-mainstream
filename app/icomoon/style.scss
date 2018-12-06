@@ -51,14 +51,14 @@
     content: $icm-back-arrow; 
   }
 }
-.icm-bookmark-normal .path1 {
+.icm-bookmark-normal {
   &:before {
     content: $icm-bookmark-normal-path1;  
     color: rgb(191, 191, 191);
   }
 }
-.icm-bookmark-normal .path2 {
-  &:before {
+.icm-bookmark-normal {
+  &:after {
     content: $icm-bookmark-normal-path2;  
     margin-left: -1em;  
     color: rgb(127, 127, 127);
