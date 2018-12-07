@@ -232,6 +232,30 @@
 	        cellAlign: 'center'
 	      });
 
+	    //weekarticles-nav
+      window.weekarticlesNav = $('.weekarticles-nav').flickity({
+        imagesLoaded: true,
+        autoPlay: 3000,
+        //groupCells: 3,
+        freeScroll: false,
+        pauseAutoPlayOnHover: true,
+        arrowShape: arrowStyle,
+        initialIndex: 0,
+        prevNextButtons: true,
+        draggable: false,
+        adaptiveHeight: true, 
+        wrapAround: false,
+        pageDots: false,
+        contain: true,
+        percentPosition: true,
+        cellAlign: 'center'
+      });
+      weekarticlesNav.data("flickity");
+      weekarticlesNav.on( 'select.flickity', function( event, index ) {
+				var index = $(this).find(".is-selected").index();
+				$(this).find(".is-selected [data-toggle]").trigger("click");
+				console.log(index, $(this).find(".is-selected"));
+			});
     	
 
 

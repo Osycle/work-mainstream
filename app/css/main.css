@@ -8731,6 +8731,9 @@ input.feedback-control {
   display: inline-block;
   vertical-align: middle; }
 
+.icm-bookmark-normal {
+  font-size: 16px; }
+
 .fa-star {
   color: #d6d6d6; }
   .fa-star.fill {
@@ -8811,9 +8814,9 @@ input.feedback-control {
   .recomended-items figure:hover .cell-hover {
     background-color: rgba(0, 0, 0, 0.7); }
   .recomended-items figure .img {
-    -webkit-transition: all 0.8s ease;
-    -o-transition: all 0.8s ease;
-    transition: all 0.8s ease;
+    -webkit-transition: all 0.5s steps(10);
+    -o-transition: all 0.5s steps(10);
+    transition: all 0.5s steps(10);
     -webkit-filter: blur(0);
     filter: blur(0); }
   .recomended-items figure .img-content {
@@ -8823,6 +8826,28 @@ input.feedback-control {
     -webkit-background-size: cover;
     background-size: cover;
     height: 210px; }
+
+.weekarticles .flickity-btn-1 .flickity-prev-next-button {
+  width: 20px; }
+  .weekarticles .flickity-btn-1 .flickity-prev-next-button.next {
+    right: -20px; }
+  .weekarticles .flickity-btn-1 .flickity-prev-next-button.previous {
+    left: -20px; }
+
+.weekarticles-nav {
+  padding-top: 18px;
+  padding-bottom: 18px; }
+  .weekarticles-nav a {
+    display: block;
+    padding: 3px 10px; }
+  .weekarticles-nav .is-selected {
+    color: #b92048; }
+
+.weekarticles-items .img {
+  height: 140px; }
+
+.arinfo {
+  color: #8c8c8c; }
 
 /* 
 		_footer.scss

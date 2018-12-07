@@ -11,7 +11,9 @@
 }
 
 
-
+.icm-bookmark-normal{
+	font-size: 16px;
+}
 
 .fa-star{
 	color: $color-gray-1;
@@ -117,7 +119,7 @@
 			}
 		}
 		.img{
-			transition: all 0.8s ease;
+			transition: all 0.5s steps(10);
 			filter: blur(0);
 		}
 		.img-content{
@@ -129,4 +131,39 @@
 			height: 210px;
 		}
 	}
+}
+
+
+
+//weekarticles
+.weekarticles{
+	.flickity-btn-1 .flickity-prev-next-button{
+		width: 20px;
+		&.next{ 
+			right: -20px;
+		}
+		&.previous{ 
+			left: -20px;
+		}
+
+	}
+}
+.weekarticles-nav{
+	padding-top: 18px;
+	padding-bottom: 18px;
+	a{
+		display: block;
+		padding: 3px 10px;
+	}
+	.is-selected{
+		color: $color-1;
+	}
+}
+.weekarticles-items{
+	.img{
+		height: 140px;
+	}
+}
+.arinfo{
+	color: $color-gray-2;
 }
