@@ -30,7 +30,7 @@
 		}
 	}
 }
-.bloggers{
+.tags-bloggers{
 	ul{
 		letter-spacing: -6px;
 		margin-left: -3px;
@@ -44,11 +44,12 @@
 		border: 1px solid $color-gray-1;
 		margin: 3px;
 		a{
+			display: inline-block;
 			padding: 5px 10px;
 		}
 		&:hover{
 			a{
-				background-color: $color-1;
+				background-color: $color-2;
 				color: white;
 			}
 		}

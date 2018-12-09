@@ -451,21 +451,6 @@ html{
 	.text-right-md 			{text-align: right;}
 	.text-justify-md		{text-align: justify;}
 
-	@for $i from 12 through 1 {
-
-		.col-md-offset-left-#{$i} { 
-			margin-left: 100/12*$i+%;
-		}
-
-	}
-	@for $i from 1 through 12 {
-
-		.col-md-offset-right-#{$i} { 
-			margin-right: 100/12*$i+%;
-		}
-
-	}
-
 
 }
 @media (min-width: 767px){
@@ -494,6 +479,19 @@ html{
 
 
 
+.row-10{
+	margin-left: -10px;
+	margin-right: -10px;
+}
+
+.row-5{
+	margin-left: -5px;
+	margin-right: -5px;
+}
+.row-0{
+	margin-left: 0;
+	margin-right: 0x;
+}
 
 
 

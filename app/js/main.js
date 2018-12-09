@@ -235,7 +235,7 @@
 	    //weekarticles-nav
       window.weekarticlesNav = $('.weekarticles-nav').flickity({
         imagesLoaded: true,
-        autoPlay: 3000,
+        autoPlay: false,
         //groupCells: 3,
         freeScroll: false,
         pauseAutoPlayOnHover: true,
@@ -253,10 +253,15 @@
       weekarticlesNav.data("flickity");
       weekarticlesNav.on( 'select.flickity', function( event, index ) {
 				var index = $(this).find(".is-selected").index();
-				$(this).find(".is-selected [data-toggle]").trigger("click");
-				console.log(index, $(this).find(".is-selected"));
+				$(this).find(".is-selected [data-toggle]").tab('show');
+				console.log(event);
 			});
-    	
+    	$(weekarticlesNav).find(".desc-content").on("click.after", function(e){
+    		e.preventDefault();
+    		var index = $(this).closest(".item").index();
+    		console.log(index);
+    		weekarticlesNav.flickity( 'select', index );
+    	})
 
 
 

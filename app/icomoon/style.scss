@@ -64,14 +64,14 @@
     color: rgb(127, 127, 127);
   }
 }
-.icm-bookmark .path1 {
+.icm-bookmark {
   &:before {
     content: $icm-bookmark-path1;  
     color: rgb(221, 53, 46);
   }
 }
-.icm-bookmark .path2 {
-  &:before {
+.icm-bookmark {
+  &:after {
     content: $icm-bookmark-path2;  
     margin-left: -1em;  
     color: rgb(176, 39, 33);
