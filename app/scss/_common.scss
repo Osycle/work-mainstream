@@ -751,9 +751,9 @@ body{
 	text-size-adjust: none;
 	font: 14px $font-family-1;
 	overflow-x: hidden;
+	background-color: white;
 	//color: white;
 	//height: auto;
-	background-color: black;
 	//background-image: url('../img/bg/bg-body.jpg');
 	background-repeat: repeat-y;
 	//background-size: cover;
@@ -1199,3 +1199,66 @@ label{
 
 
 
+
+body.nightmode{
+	$nightcolor: #333;
+	$nightcolor-2: #424242;
+	background-color: $nightcolor;
+	color: white;
+	.color-black, .parag-gray{
+		color: inherit;
+		p{
+			color: inherit;
+		}
+	}
+	.header-top{
+		color: white;
+		background-color: transparent;
+	}
+	.header-middle{
+		background-color: $nightcolor;
+	}
+	.header-bottom .align-i-center{ 
+		background-color: $nightcolor-2;
+		li{
+			color: white;
+			border-color: #424040;
+		}
+		.sub-menu-1{
+			background-color: $nightcolor-2;
+			a{
+				color: lighten($nightcolor, 50%); 
+			}
+		}
+	}
+	.tags-bloggers{
+		li{
+			border-color: $nightcolor-2;
+			color: inherit;
+		}
+	}
+	.tags-content{
+		border-color: $nightcolor-2;
+	}
+	main{
+		color: white;
+	}
+
+	.logo-def{ display: none;}
+	.logo-nm{ display: block !important;}
+	.btn-def{
+		background-color: $color-3;
+	}
+	.subscribe-form{
+		input{
+			color: white;
+		}
+	}
+	.min-menu-header{
+		background-color: $nightcolor;
+		color: white;
+		.icon-bar{
+			background-color: white;
+		}
+	}
+}
