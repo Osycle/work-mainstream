@@ -220,7 +220,7 @@ html{
 		a:hover{
 			transform: translateY(-5px);
 			text-decoration: none;
-			color: white;
+			color: $color-gray-2;
 		}
 		&.reverse{
 			a{
@@ -235,19 +235,19 @@ html{
 		}
 	}
 	a{
-		color: $color-1;
+		color: $color-gray-2;
 	}
 	.active{
 		a{
-			color: white;
+			color: $color-gray-2;
 		}
 	}
 	& > li + li:before{
-		color: white;
+		color: $color-gray-2;
 		font-family: FontAwesome;
 		content: " / ";
 		font-size: 0.9em;
-		margin:0  5px;
+		margin:0  1px;
 	}
 	li{
 		vertical-align: baseline;
@@ -259,9 +259,6 @@ html{
 		}
 	}
 }
-
-
-
 
 
 
@@ -676,13 +673,14 @@ table {
 			display: inline-block;
 			//margin: 0 3px;
 			margin-right: 5px;
+			border: 1px solid $color-gray-1;
 			margin-top: 5px;
 			font-weight: 500;
 			text-align: center;
-			border-radius: 5px;
 			background-color: transparent;
 			transition: all 0.3s ease;
 			a{
+				width: 45px;
 				color: black;
 				display: block;
 				background-color: transparent;
@@ -995,41 +993,7 @@ hr{
 }
 
 
-// .main-content{
-// 	//z-index: 1;
-// 	overflow: hidden;
-// 	position: relative;
-// 	@media (max-width: 991px){
-// 		text-align: center ;
-// 	}
-// 	p{
-// 		font-size: 1em;
-// 		//font-weight: 400;
-// 		position: relative;
-// 		line-height: 170%;
-// 	}
-// 	ul:not([class]){
-// 		text-align: left;
-// 		margin-top: 10px;
-// 		font-size: 0.95em;
-// 		margin-bottom: 10px;
-// 	}
 
-// 	*:not(figure):not(div){
-// 		//letter-spacing: 0.5px;
-// 	}
-// 	.line-height-def{
-// 		line-height: 100%;
-// 	}
-// }
-.breadcrumb-container{
-
-
-	@media (min-width:992px){
-		//position: absolute;
-		//width: 20%;
-	}
-}
 .bg-wrapper{
 	@extend .clearfix;
 }
