@@ -11,10 +11,15 @@
 }
 
 
-.icm-bookmark-normal{
-	font-size: 16px;
+.icm-bookmark-normal, .icm-bookmark{
+	font-size: 17px;
 }
-
+.circle-ava{
+	border-radius: 50%;
+	background-image: url('../img/other/ava-def.jpg');
+	background-position: center;
+	background-size: cover;
+}
 .fa-star{
 	color: $color-gray-1;
 	&.fill{
@@ -195,9 +200,12 @@
 .arinfo{
 	color: $color-gray-2;
 	font-size: 0.88em;
-	li:nth-child(1){
+	.separate{
 		margin-bottom: 5px;
 		width: 100%;
+	}
+	.active{
+		color: $color-1;
 	}
 }
 
@@ -397,5 +405,38 @@
 		margin: 2px 0;
 		color: white;
 		display: inline-block;
+	}
+}
+
+
+
+.rubric-article{
+	border: 1px solid $color-gray-1;
+	padding: 20px 30px;
+}
+.blogger-bar{
+	border: 1px solid $color-gray-1;
+}
+
+.article-player{
+	.jp-audio, .jp-jplayer{
+		//width: 100%;
+	}
+	.jp-audio, .jp-audio-stream, .jp-video{
+		border: none;
+	}
+	.jp-details, .jp-playlist{
+		border: 1px solid lighten($color-gray-1, 5%);
+		background-color: lighten($color-gray-1, 15%);
+		//border-top: 0;
+	}
+	div.jp-type-playlist div.jp-playlist a.jp-playlist-current, div.jp-type-playlist div.jp-playlist a:hover{
+		color: $color-1;
+	}
+	.jp-audio .jp-controls{
+		//width: 100%;
+	}
+	.jp-interface{
+		background-color: white;
 	}
 }

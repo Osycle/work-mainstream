@@ -6994,6 +6994,13 @@ tbody.collapse.in {
 .bg-color-training {
   background-color: #f66729; }
 
+.bg-color-it, .bg-color-career, .bg-color-cybersport, .bg-color-music, .bg-color-self, .bg-color-health, .bg-color-training {
+  color: white;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  display: inline-block;
+  vertical-align: middle; }
+
 [class*="col-"] {
   padding-left: 0;
   padding-right: 0; }
@@ -7696,25 +7703,22 @@ table {
   .btn-style i, .btn-def i, .btn-icon i, .btn-opacity i {
     vertical-align: middle; }
 
-.btn-def *, .btn-icon * {
-  color: inherit; }
-
-.btn-def:not([class*="bg-color"]), .btn-icon:not([class*="bg-color"]) {
-  background-color: #b92048; }
-
-.btn-def:not(.changecolor-none):hover, .btn-icon:not(.changecolor-none):hover {
-  background-color: #3a82db;
+.btn-def, .btn-icon {
   color: white; }
-
-.btn-def.radius, .btn-icon.radius {
-  -webkit-border-radius: 20px;
-  border-radius: 20px; }
-
-.btn-def.reverse:not([class*="bg-color"]), .btn-icon.reverse:not([class*="bg-color"]) {
-  background-color: #1ca19c; }
-
-.btn-def.reverse:not(.changecolor-none):hover, .btn-icon.reverse:not(.changecolor-none):hover {
-  background-color: #3a82db; }
+  .btn-def *, .btn-icon * {
+    color: inherit; }
+  .btn-def:not([class*="bg-color"]), .btn-icon:not([class*="bg-color"]) {
+    background-color: #b92048; }
+  .btn-def:not(.changecolor-none):hover, .btn-icon:not(.changecolor-none):hover {
+    background-color: #3a82db;
+    color: white; }
+  .btn-def.radius, .btn-icon.radius {
+    -webkit-border-radius: 20px;
+    border-radius: 20px; }
+  .btn-def.reverse:not([class*="bg-color"]), .btn-icon.reverse:not([class*="bg-color"]) {
+    background-color: #1ca19c; }
+  .btn-def.reverse:not(.changecolor-none):hover, .btn-icon.reverse:not(.changecolor-none):hover {
+    background-color: #3a82db; }
 
 .btn-opacity {
   background-color: transparent;
@@ -7806,7 +7810,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-text-size-adjust: none;
   text-size-adjust: none;
-  font: 14px "Roboto";
+  font: 16px "Roboto";
   overflow-x: hidden;
   background-color: white;
   background-repeat: repeat-y; }
@@ -7924,8 +7928,7 @@ h1, h2, h3, h4 {
   position: relative; }
 
 h1 {
-  text-transform: uppercase;
-  font-size: 1.86667em;
+  font-size: 1.6em;
   margin-bottom: 15px;
   font-weight: 600; }
   @media (max-width: 430px) {
@@ -7933,8 +7936,7 @@ h1 {
       font-size: 1.83333em; } }
 
 h2 {
-  text-transform: uppercase;
-  font-size: 1.6em;
+  font-size: 1.46667em;
   margin-bottom: 15px;
   font-weight: 600; }
   @media (max-width: 430px) {
@@ -8224,7 +8226,7 @@ body.nightmode {
   background-color: white;
   color: #8c8c8c;
   border-bottom: 1px solid #d6d6d6;
-  font-size: 0.96em; }
+  font-size: 0.80em; }
   .header-top .signin-links {
     min-width: 220px; }
   .header-top .reg-link {
@@ -8787,8 +8789,16 @@ input.feedback-control {
   display: inline-block;
   vertical-align: middle; }
 
-.icm-bookmark-normal {
-  font-size: 16px; }
+.icm-bookmark-normal, .icm-bookmark {
+  font-size: 17px; }
+
+.circle-ava {
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-image: url("../img/other/ava-def.jpg");
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover; }
 
 .fa-star {
   color: #d6d6d6; }
@@ -8930,9 +8940,11 @@ input.feedback-control {
 .arinfo {
   color: #8c8c8c;
   font-size: 0.88em; }
-  .arinfo li:nth-child(1) {
+  .arinfo .separate {
     margin-bottom: 5px;
     width: 100%; }
+  .arinfo .active {
+    color: #b92048; }
 
 .subscribe-content .wrapper {
   border-top: 5px solid #b92048;
@@ -9116,6 +9128,26 @@ input.feedback-control {
     margin: 2px 0;
     color: white;
     display: inline-block; }
+
+.rubric-article {
+  border: 1px solid #d6d6d6;
+  padding: 20px 30px; }
+
+.blogger-bar {
+  border: 1px solid #d6d6d6; }
+
+.article-player .jp-audio, .article-player .jp-audio-stream, .article-player .jp-video {
+  border: none; }
+
+.article-player .jp-details, .article-player .jp-playlist {
+  border: 1px solid #e3e3e3;
+  background-color: #fcfcfc; }
+
+.article-player div.jp-type-playlist div.jp-playlist a.jp-playlist-current, .article-player div.jp-type-playlist div.jp-playlist a:hover {
+  color: #b92048; }
+
+.article-player .jp-interface {
+  background-color: white; }
 
 /* 
 		_footer.scss

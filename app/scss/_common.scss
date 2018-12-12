@@ -50,7 +50,13 @@ $color-training: #f66729;
 .bg-color-health{background-color: $color-health;}
 .bg-color-training{background-color: $color-training;}
 
-
+.bg-color-it, .bg-color-career, .bg-color-cybersport, .bg-color-music, .bg-color-self, .bg-color-health, .bg-color-training{
+	color: white;
+	padding-top: 2px;
+	padding-bottom: 2px;
+  display: inline-block;
+  vertical-align: middle;
+}
 
 [class*="col-"]{
 	padding-left: 0;
@@ -596,6 +602,7 @@ table {
 	*{
 		color: inherit;
 	}
+	color: white;
 	&:not([class*="color-"]){
 		//color: black;
 	}
@@ -747,7 +754,7 @@ body{
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	text-size-adjust: none;
-	font: 14px $font-family-1;
+	font: 16px $font-family-1;
 	overflow-x: hidden;
 	background-color: white;
 	//color: white;
@@ -885,8 +892,7 @@ h1, h2, h3, h4{
 	position: relative;	
 }
 h1{
-	text-transform: uppercase;
-	font-size: em(28, 15);
+	font-size: em(24, 15);
 	margin-bottom: 15px;
 	font-weight: 600;
 	@media (max-width: 430px) {
@@ -894,8 +900,7 @@ h1{
 	}
 }
 h2{
-	text-transform: uppercase;
-	font-size: em(24, 15);
+	font-size: em(22, 15);
 	margin-bottom: 15px;
 	font-weight: 600;
 	@media (max-width: 430px) {
