@@ -32,7 +32,7 @@
 	background-color: rgba($color-2, 0.8);
 }
 .fancybox-bg{
-	background-color: rgba(black, 0.8);
+	background-color: rgba(black, 0.2);
 	// &:before{
 	// 	@extend .claf;
 	// 	border: 0px outset rgba($color-2, 1);
@@ -47,10 +47,17 @@
 	// }
 
 }
+#page{
+	transition: all 0.3s ease;
+}
 .fancybox-is-open{
+	&~#page{
+		filter: blur(5px);
+	}
 	.fancybox-bg{
 		opacity: 1;
-		background-color: rgba(black, 0.8);
+		background-color: rgba(black, 0.2);
+		
 		&:before, &:after{
 			transition: all 0.8s ease;
 		}

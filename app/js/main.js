@@ -393,7 +393,13 @@
 
 
 
-
+		$("#nightmode-check").on("change", function(){
+			console.log(this.checked);
+			if( this.checked )
+				$("body").addClass("nightmode");
+			else
+				$("body").removeClass("nightmode");
+		});
 
 
 

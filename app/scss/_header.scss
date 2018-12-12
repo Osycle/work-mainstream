@@ -669,46 +669,65 @@ textarea.form-control{
 
 
 .form-def{
-	background-color: $color-1;
-	background-image: url('../img/bg/bg-form.jpg');
-	background-size: cover;
-	border-radius: 15px;
-	color: white;
-	@media (min-width: 992px) {
-		width: 360px;
-	}
-	input.feedback-control{
-		border: 1px solid $color-1;
-		height: 50px;
-		color: black;
-		padding-left: 55px;
-		background-color: white;
-	}
-	.input-icon{
-		overflow: hidden;
-		margin-top: 10px;
-		border-radius: 30px;
-	}
-	[class*="ls-icon"]{
-		padding-left: 0 !important;
+	$radius: 50px;
+	border-bottom-right-radius: $radius;
+	color: $color-gray-2;
+	padding-left: 40px;
+	padding-right: 40px;
+	font-size: 0.9em;
+	.cap-content{
+		color: white;
+		font-size: 0.9em;
+		h1{
+			font-weight: 400;
+		}
 		&:before{
-			font-size: 20px;
-			padding: 25px 15px;
-			background-color: $color-3;
-			height: 100%;
+			@extend .claf;
+			background-color: $color-1;
+			height: 120px !important;
+			border-bottom-right-radius: $radius;
+			background-image: url('../img/logo-ico.svg');
+			background-repeat: no-repeat;
+		}
+		*{
+			position: relative;
 		}
 	}
+	.form-content{
+		z-index: 2;
+		position: relative;
+		padding: 20px 30px;
+		background-color: white;
+		box-shadow: 0 0 36px -6px rgba(black, 0.6);
+		border-bottom-right-radius: $radius;
+	}
+	[class*=icm]{
+		color: $color-1;
+		margin-left: 15px;
+	}
+	.input-icon{
+		display: flex;
+    align-items: center;
+    [class*=icm]{
+	    position: absolute;
+    }
+	}
+
+	@media (min-width: 992px) {
+		width: 420px;
+	}
+
 }
 
 
 input.feedback-control{
-	border: 1px solid white;
+	border: none;
+	border-bottom: 1px solid $color-gray-1;
 	background-color: transparent;
-	border-radius: 25px;
 	height: 35px;
 	width: 100%;
-	padding-left: 15px;
-	padding-right: 15px;
-	color: white;
-	@include placeholder-color( rgba(white, 0.4) );
+	padding-left: 45px;
+	padding-right: 45px;
+	color: black;
+	@include placeholder-color( $color-gray-2 );
 }

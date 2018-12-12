@@ -106,13 +106,9 @@
 		}
 	}
 	figure{
-		@media (min-width: 992px){
-			&:nth-child(1){
-				.img{
-					height: 440px;
-				}
-			}
-		}
+		@media (min-width: 992px){&:nth-child(1){.img{height: 440px;}}}
+		@media (max-width: 991px){&:nth-child(1){.img{height: 300px;}}}
+
 		&:hover{
 			.img{
 				transform: scale(1.05);
@@ -143,8 +139,7 @@
 				min-height: 210px;
 			}
 			.cell-hover{
-				position: relative;
-				background-color: #333;
+			
 			}
 		}
 	}

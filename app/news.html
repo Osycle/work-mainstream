@@ -26,32 +26,50 @@
 		</noscript>
 		<!-- Скрытые формы -->
 		<div class="hide">
-			<div id="form-def" class="form-def">
-				<div class="footer-feedback">
-					<h1 align="center">Оставить заявку</h1>
-					<br>
-					<form action="" method="get" accept-charset="utf-8">
-						<label class="m-v-10 box-xs-10">
-							<p>*Ваше имя:</p>
-							<div class="input-icon">
-								<span class="ls-icon-user"></span>
-								<input type="text" name="" value="" class="feedback-control" placeholder="Имя">
+			<div id="form-signin" class="form-def">
+				<div class="wrapper">
+					<div class="cap-content text-center">
+						<p>Добро пожаловать!</p>
+						<h1 class="text-uppercase">Вход в аккаунт</h1>
+					</div>
+					<div class="form-content clearfix">
+						<form action="" method="get" accept-charset="utf-8">
+							<label class="m-v-10 box-xs-10">
+								<div class="input-icon">
+									<span class="icm-user"></span>
+									<input type="text" name="" value="" class="feedback-control" placeholder="Логин">
+								</div>
+							</label>
+							<label class="m-v-10 box-xs-10">
+								<div class="input-icon">
+									<span class="icm-lock"></span>
+									<input type="password" name="" value="" class="feedback-control" placeholder="Ваш пароль">
+								</div>
+							</label>
+							<div class="align-center justify-c-between">	
+								<div class="m-r-offset">
+									<input type="checkbox" name="heard" value="Интернет" class="hide va-middle inline-block p-r-5" id="hearing-1">
+									<label for="hearing-1" role="button">
+										<span class="va-middle checkbox-style-1"></span>
+										<span class="m-l-10 va-middle">Запомнить меня</span>
+									</label>
+								</div>
+								<span class="btn-def m-v-15">
+									<a href="" title="" class="p-h-20">Отправить</a>
+								</span>
 							</div>
-						</label>
-						<label class="m-v-10 box-xs-10">
-							<p>*Ваш e-mail:</p>
-							<div class="input-icon">
-								<span class="ls-icon-envelope-shape"></span>
-								<input type="text" name="" value="" class="feedback-control" placeholder="+ 998 (__) ___-__-__">
+							<div class="color-1">
+								<a href="" title="">Забыли пароль?</a>
 							</div>
-						</label>
-						<span class="btn-def reverse m-v-15 float-right-md">
-							<a href="" title="" class="p-h-30">Отправить</a>
-						</span>
-					</form>
+						</form>
+					</div>
+					<div class="color-1 text-center m-t-30">
+						<p><a href="" title=""><b><span class="icm-add-user-button m-r-10"></span> Создать аккаунт</b></a></p>
+					</div>
 				</div>
 			</div>
 		</div>
+
 		<!-- HEADER -->
 		<div class="header-hidden"></div>
 		<header id="header" class="header-scroll hidden-sm hidden-xs" data-aos="fade">
@@ -76,9 +94,9 @@
 							</div>
 							<div class="float-left p-h-15 signin-links flex align-center">
 								<div class="user-face align-center">
-									<div class="circle-ava"></div>
+									<div class="circle-ava" style="width: 20px;height: 20px;"></div>
 									<div class="p-l-10 color-black">
-										<a href="" title=""><b><u>Войти</u></b></a>
+										<a href="javascript:;" data-src="#form-signin" data-fancybox=""><b><u>Войти</u></b></a>
 									</div>
 								</div>
 								<div class="reg-link m-l-offset">

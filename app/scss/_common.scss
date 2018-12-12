@@ -754,7 +754,7 @@ body{
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	text-size-adjust: none;
-	font: 16px $font-family-1;
+	font: 15px $font-family-1;
 	overflow-x: hidden;
 	background-color: white;
 	//color: white;
@@ -1124,14 +1124,14 @@ input[type="checkbox"]:checked{
 	&:before{
 		@extend .claf;
 		@extend .trans-center;
-		width: 18px;
+		width: 18px !important;
 		height: 18px;
 		border-radius: 3px;
 		border: 2px solid $color-1;
 	}
 }
 //radio
-input[type="radio"]:checked{
+input[type="radio"]:checked, input[type="checkbox"]:checked{
 	&~.radio-style-1, &~label .radio-style-1{
 		background-color: $color-1;
 	}		
