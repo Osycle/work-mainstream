@@ -9,6 +9,9 @@
 	display: inline-block;
 	vertical-align: middle;
 }
+.border-def{
+	border: 1px solid $color-gray-1;
+}
 
 
 .icm-bookmark-normal, .icm-bookmark{
@@ -251,7 +254,6 @@
 
 //tags-content
 .tags-content{
-	border: 1px solid $color-gray-1;
 	padding: 30px 20px;
 	padding-top: 20px;
 }
@@ -393,6 +395,7 @@
 	font-size: 0.78em;
 	justify-content: space-between;
 	.list{
+		text-align: right;
 		margin-left: 10px;
 	}
 	li{
@@ -404,15 +407,13 @@
 }
 
 
-
+//rubric-article
 .rubric-article{
-	border: 1px solid $color-gray-1;
 	padding: 20px 30px;
 }
 .blogger-bar{
-	border: 1px solid $color-gray-1;
+	
 }
-
 .article-player{
 	.jp-audio, .jp-jplayer{
 		//width: 100%;
@@ -433,5 +434,106 @@
 	}
 	.jp-interface{
 		background-color: white;
+	}
+}
+
+.article-buttons{
+	.icm-tag{
+		width: 20px;
+		font-size: 18px;
+		color: $color-gray-2;
+	}
+	.tags-li{
+		li{
+			margin-top: 0;
+		}
+	}
+}
+#btn-like{
+	& ~ .btn-like{
+		.icm-smiling{
+			display: none;
+		}	
+	}
+	&:checked{
+		& ~ .btn-like{
+			.icm-smiling{
+				display: block;
+			}	
+			.icm-smile{
+				display: none;
+			}	
+
+		}
+	}
+}
+.btn-like{
+	background-color: $color-like;
+	a, .btn-this{
+		padding-left: 55px !important;
+	}
+	.icm-smiling, .icm-smile{
+    font-size: 26px;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+	}
+}
+.share-li{
+	li{
+		border: 1px solid $color-gray-1;
+		padding: 0;
+		transition: 0.4s;
+	}
+	a{
+		padding: 6px 20px;
+    height: 40px;
+    align-items: center;
+	}
+
+}
+.facebook-bg{
+	$color: #3D71AA;
+	color: $color; 
+	&:hover{
+		border-color: $color;
+		background-color: $color;
+		color: white;
+	}
+}
+.telegram-bg{
+	$color: #3091F8;
+	color: $color; 
+	&:hover{
+		border-color: $color;
+		background-color: $color;
+		color: white;
+	}
+}
+.copy-code-bg{
+	$color: #B82049;
+	color: $color; 
+	&:hover{
+		border-color: $color;
+		background-color: $color;
+		color: white;
+	}
+}
+.huiden{
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+}
+
+.article-comments{
+	padding: 20px 30px;
+}
+.article-comments-items{
+	font-size: 0.9em;
+	.img{
+		width: 90px;
+		height: 90px;
 	}
 }

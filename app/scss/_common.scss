@@ -17,6 +17,8 @@ $font-family-3: "sans-serif";
 
 $color-scroll: $color-1;
 $color-footer: #0071BC;
+$color-like: #FFC928;
+
 
 $color-gray-1: #d6d6d6;
 $color-gray-2: #8c8c8c;
@@ -909,7 +911,7 @@ h2{
 } 
 h3{
 	font-weight: 600;
-	font-size: em(20, 15);
+	font-size: em(18, 15);
 	@media (max-width: 430px) {
 		font-size: em(20/1.1, 15);
 	}
@@ -1028,9 +1030,7 @@ hr{
 .pie-form-control{
 	border: 1px solid rgba($color-1, 0.8);
 	//border-bottom-color: white;
-
 	background-color: white;
-	border-radius: 10px;
 	&:not([class*='color-']){
 		color: inherit;
 		color: currentColor;
@@ -1044,7 +1044,6 @@ hr{
 input.pie-form-control{
 	height: 40px;
 	padding: 5px 12px;
-	border-radius: 20px;
 	border-color: $color-gray-1;
 	&[type="checkbox"]{
 		height: auto;
@@ -1062,7 +1061,6 @@ textarea.pie-form-control{
 	border-color: $color-gray-1;
 	padding: 10px 12px;
 	min-height: 120px;
-	border-radius: 20px;
 	&:not([class*="box-"]):not([class*="col-"]){
 		width: 100%;
 	}
@@ -1171,9 +1169,17 @@ label{
 
 body.nightmode{
 	$nightcolor: #333;
-	$nightcolor-2: #424242;
 	background-color: $nightcolor;
 	color: white;
+	.border-def, .header-top, #footer, .pagination-div .pagination li{
+		border-color: darken($color-gray-1, 50%);
+	}
+	main, .header-top, .header-bottom .align-i-center li, .min-menu-header, .pagination-div .pagination li a{
+		color: white;
+	}
+	.pie-form-control{
+		color: black;
+	}
 	.color-black, .parag-gray{
 		color: inherit;
 		p{
@@ -1181,36 +1187,38 @@ body.nightmode{
 		}
 	}
 	.header-top{
-		color: white;
 		background-color: transparent;
 	}
 	.header-middle{
 		background-color: $nightcolor;
 	}
 	.header-bottom .align-i-center{ 
-		background-color: $nightcolor-2;
+		background-color: darken($color-gray-1, 50%);
 		li{
-			color: white;
-			border-color: #424040;
+			border-color: darken($color-gray-2, 25%);
 		}
 		.sub-menu-1{
-			background-color: $nightcolor-2;
+			background-color: darken($color-gray-1, 50%);
 			a{
 				color: lighten($nightcolor, 50%); 
 			}
 		}
 	}
-	.tags-bloggers{
+	.tags, .share-li{
 		li{
-			border-color: $nightcolor-2;
+			border-color: darken($color-gray-1, 50%);
 			color: inherit;
 		}
 	}
 	.tags-content{
-		border-color: $nightcolor-2;
+		border-color: darken($color-gray-1, 50%);
 	}
-	main{
+	.form-def .form-content, .fancybox-slide > *{
+		background-color: darken($color-gray-2, 40%);
 		color: white;
+		input, textarea{
+			color: white;
+		}
 	}
 
 	.logo-def{ display: none;}
@@ -1225,7 +1233,6 @@ body.nightmode{
 	}
 	.min-menu-header{
 		background-color: $nightcolor;
-		color: white;
 		.icon-bar{
 			background-color: white;
 		}

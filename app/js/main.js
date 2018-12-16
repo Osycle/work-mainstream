@@ -355,6 +355,7 @@
 				});
 			}
 			$(window).trigger("resize");
+			$(window).trigger("scroll");
 		}
 
 
@@ -376,10 +377,8 @@
 			} else if ($(window).scrollTop() < 100 && headerRange == true) {
 				headerRange = !true;
 				if (minMenu) minMenu.removeClass("scrolled");
-			} //.originalEvent.wheelDelta
-
+			}
 		});
-		$(window).trigger("scroll");
 
 		$(window).on("mousewheel", function(event) {
 			if (!headerRange) return;
@@ -393,16 +392,28 @@
 
 
 
-		$("#nightmode-check").on("change", function(){
-			console.log(this.checked);
-			if( this.checked )
+		$("#nightmode-check").on("change", function( e, bool ){
+			if( typeof bool == "boolean")
+				this.checked = bool;	
+			if( this.checked ){
 				$("body").addClass("nightmode");
-			else
+				nightmodeChange(true);
+			}else{
 				$("body").removeClass("nightmode");
+				nightmodeChange(false);
+			}
 		});
-
-
-
+		function nightmodeChange(status){
+			var obj = {
+				nightmode: status
+			}
+			var jsonText = JSON.stringify(obj);
+			localStorage.setItem('nightmode', jsonText);
+		}
+		window.jsonOptions = JSON.parse( localStorage["nightmode"] || false );
+		if(jsonOptions){			
+			$("#nightmode-check").trigger("change", jsonOptions.nightmode)
+		}
 
 
 
