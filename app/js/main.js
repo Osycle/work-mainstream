@@ -213,8 +213,8 @@
 
 
 	    //short-partners-carousel
-	    if ($(".short-partners-carousel .carousel-items figure").length > 1 || checkSm())
-	      $('.short-partners-carousel .carousel-items').flickity({
+	    if ($(".article-carousel .carousel-items figure").length > 1 || checkSm())
+	      $('.article-carousel .carousel-items').flickity({
 	        imagesLoaded: true,
 	        autoPlay: 3000,
 	        //groupCells: 3,
@@ -226,7 +226,7 @@
 	        draggable: false,
 	        adaptiveHeight: true, 
 	        wrapAround: false,
-	        pageDots: !checkSm(),
+	        pageDots: false,
 	        contain: true,
 	        percentPosition: true,
 	        cellAlign: 'center'
@@ -393,12 +393,15 @@
 
 
 		$("#nightmode-check").on("change", function( e, bool ){
+			console.log(this);
 			if( typeof bool == "boolean")
 				this.checked = bool;	
 			if( this.checked ){
+				$('[for="nightmode-check"]').addClass("checked")
 				$("body").addClass("nightmode");
 				nightmodeChange(true);
 			}else{
+				$('[for="nightmode-check"]').removeClass("checked")
 				$("body").removeClass("nightmode");
 				nightmodeChange(false);
 			}

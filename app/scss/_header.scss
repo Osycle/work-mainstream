@@ -136,6 +136,13 @@ $header-min-menu: 70px;
 			}
 		}
 	}
+	label.checked{
+		.circle-btn{
+			left: 100%;
+			transform: translateX(-100%);
+			background-color: $color-1;
+		}
+	}
 }
 .header-socicons{
 	ul{
@@ -422,6 +429,9 @@ ul[class*="sub-menu"]{
 	color: #333;
 	box-shadow: 0 0 20px 0 black;
 	background-color: white;
+	.align-i-center{
+		height: $header-min-menu;
+	}
 	.min-menu-logo{
 		padding: 12px 0;
 		width: 100%;

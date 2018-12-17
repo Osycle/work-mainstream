@@ -1171,11 +1171,16 @@ body.nightmode{
 	$nightcolor: #333;
 	background-color: $nightcolor;
 	color: white;
-	.border-def, .header-top, #footer, .pagination-div .pagination li{
+	.border-def, .header-top, #footer, .pagination-div .pagination li, .panel{
 		border-color: darken($color-gray-1, 50%);
 	}
 	main, .header-top, .header-bottom .align-i-center li, .min-menu-header, .pagination-div .pagination li a{
 		color: white;
+	}
+	.panel{
+		*{
+			color: white;
+		}
 	}
 	.pie-form-control{
 		color: black;

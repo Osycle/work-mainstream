@@ -12,8 +12,22 @@
 .border-def{
 	border: 1px solid $color-gray-1;
 }
-
-
+.mtype-icon-content{
+	top: 10px;
+	right: 13px;
+	position:  absolute;
+}
+.mtype-icon{
+	margin: 5px;
+	font-size: 28px;
+	display: inline-block;
+}
+.icm-musical-note{
+	font-size: 1em;
+	padding: 6px;
+	border: 1px solid white;
+	border-radius: 50%;
+}
 .icm-bookmark-normal, .icm-bookmark{
 	font-size: 17px;
 }
@@ -21,6 +35,7 @@
 	border-radius: 50%;
 	background-image: url('../img/other/ava-def.jpg');
 	background-position: center;
+
 	background-size: cover;
 }
 .fa-star{
@@ -182,7 +197,7 @@
 	figure{
 		transition: all 0.3s ease;
 		filter: contrast(95%);
-		&:hover{
+		&.is-selected, &:hover{
 			filter: contrast(120%);
 		}
 	}
@@ -199,7 +214,7 @@
 	color: $color-gray-2;
 	font-size: 0.88em;
 	.separate{
-		margin-bottom: 5px;
+		margin-bottom: 10px;
 		width: 100%;
 	}
 	.active{
@@ -411,9 +426,7 @@
 .rubric-article{
 	padding: 20px 30px;
 }
-.blogger-bar{
-	
-}
+
 .article-player{
 	.jp-audio, .jp-jplayer{
 		//width: 100%;
@@ -434,6 +447,15 @@
 	}
 	.jp-interface{
 		background-color: white;
+	}
+}
+.article-video{
+	iframe{
+		width: 100%;
+		@media (max-width: 991px) {
+			width: 100% !important;
+			height: auto !important;
+		}
 	}
 }
 
@@ -536,4 +558,105 @@
 		width: 90px;
 		height: 90px;
 	}
+}
+
+
+
+.same{
+	.article-carousel{
+		//overflow: hidden;
+		@media (max-width: 991px) {
+			padding-top: 30px;
+		}
+	}
+	.weekarticles-items{
+		margin-left: -10px;
+		margin-right: -10px;
+		figure{
+			position: relative;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+	.flickity-btn-2{
+		.flickity-prev-next-button{
+			@media (min-width: 992px) {
+				top: -30px;
+
+			}
+			@media (max-width: 991px) {
+				top: -25px;
+				&.previous{
+					left: 40% !important;
+				}
+				&.next{
+					right: 40%;
+				}
+			}
+
+		}
+	}
+}
+
+
+.short-popular{
+	.recomended-items{
+		figure:nth-child(1){
+			.img{
+				height: 210px;
+			}
+		}
+	}
+}
+
+//rubric
+.rubric{
+	.weekarticles-items{
+		.img{
+			height: 210px;
+		}
+	}
+}
+
+
+
+.faq-accordion{
+	// .panel-default{
+	// 	border-color: $color-1;
+	// }
+	.panel-heading{
+		background-color: transparent;
+		padding: 0;
+		h4{
+			text-transform: none;
+		}
+		.fa{
+			position: absolute;
+			right: 15px;
+			transform: rotate(180deg);
+			top: 14px;
+		}
+		a{
+			display: block;
+			padding: 10px 15px;
+			transition: all 0.3s ease;
+			//border: 1px solid $color-1;
+			&:not(.collapsed){
+				color: white;
+				background-color: $color-1;
+				.fa{
+					transform: scale(1);
+				}
+			}
+		}
+	}
+}
+.panel{
+	background-color: transparent;
+}
+.panel-group .panel-heading + .panel-collapse > .panel-body, .panel-group .panel-heading + .panel-collapse > .list-group{
+	border-top: none;
+}
+.panel-group .panel{
+	border-radius: 0;
 }

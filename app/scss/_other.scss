@@ -220,16 +220,23 @@ html{
 }
 .flickity-btn-2{
 	.flickity-prev-next-button{
+		
 		background: transparent;
 		width: 33px;
     height: 33px;
     .arrow{
-    	fill: $color-gray-3;
+    	fill: $color-1;
     }
     svg{
     	transform: scale(0.9);
     }
-
+    @media (min-width: 991px) {
+    	top: 0;
+	    &.previous{
+	    	right: 55px;
+	    	left: auto;
+	    }
+    }
 	}
 }
 .flickity-page-dots{

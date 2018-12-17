@@ -10,29 +10,29 @@
 
 /* padding */
 html{
-	@for $i from 0 through 24 {
+	@for $i from 0 through 12 {
 		.p-h-#{5*$i} { 
 			padding-left: 5*$i+px;
 			padding-right: 5*$i+px;}}
 
-	@for $i from 0 through 24 {
+	@for $i from 0 through 12 {
 		.p-v-#{5*$i} { 
 			padding-top: 5*$i+px;
 			padding-bottom: 5*$i+px;}}
 
-	@for $i from 0 through 24 {
+	@for $i from 0 through 12 {
 		.p-t-#{5*$i} { 
 			padding-top: 5*$i+px;}}
 
-	@for $i from 0 through 24 {
+	@for $i from 0 through 12 {
 		.p-b-#{5*$i} { 
 			padding-bottom: 5*$i+px;}}
 
-	@for $i from 0 through 24 {
+	@for $i from 0 through 12 {
 		.p-l-#{5*$i} { 
 			padding-left: 5*$i+px;}}
 
-	@for $i from 0 through 24 {
+	@for $i from 0 through 12 {
 		.p-r-#{5*$i} { 
 			padding-right: 5*$i+px;}}
 	.p-0{ padding: 0;}
@@ -66,43 +66,51 @@ html{
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.m-l-auto{margin-left: auto;}
+.m-r-auto{margin-right: auto;}
+
 @media (max-width:991px){
 	.m-auto-sm{	
 		margin-left: auto;
 		margin-right: auto;
 	}
+	.m-l-auto-sm{margin-left: auto;}
+	.m-r-auto-sm{margin-right: auto;}
 }
 @media (min-width:992px){
 	.m-auto-md{	
 		margin-left: auto;
 		margin-right: auto;
 	}
+	.m-l-auto-md{margin-left: auto;}
+	.m-r-auto-md{margin-right: auto;}
 }
 
 
-@for $i from 0 through 24 {
+@for $i from 0 through 12 {
 	.m-h-#{5*$i} { 
 		margin-left: 5*$i+px;
 		margin-right: 5*$i+px;}}
 
-@for $i from 0 through 24 {
+@for $i from 0 through 12 {
 	.m-v-#{5*$i} { 
 		margin-top: 5*$i+px;
 		margin-bottom: 5*$i+px;}}
 
-@for $i from 0 through 24 {
+@for $i from 0 through 12 {
 	.m-t-#{5*$i} { 
 		margin-top: 5*$i+px;}}
 
-@for $i from 0 through 24 {
+@for $i from 0 through 12 {
 	.m-b-#{5*$i} { 
 		margin-bottom: 5*$i+px;}}
 
-@for $i from 0 through 24 {
+@for $i from 0 through 12 {
 	.m-l-#{5*$i} { 
 		margin-left: 5*$i+px;}}
 
-@for $i from 0 through 24 {
+@for $i from 0 through 12 {
 	.m-r-#{5*$i}) { 
 		margin-right: 5*$i+px;}}
 
