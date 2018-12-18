@@ -473,12 +473,12 @@ html{
 .select2-container--default{
 	.select2-selection--single{
 		//border-radius: 15px;
-		border: 1px solid $color-1;
+		border: 1px solid $color-gray-1;
 		background-color: transparent;
-		height: 50px;		
-		border-radius: 10px;
+		height: 40px;		
+		border-radius: 0;
 		.select2-selection__rendered{
-			line-height: 50px;
+			line-height: 40px;
 		}
 		&:focus{
 			outline: none;
@@ -488,8 +488,8 @@ html{
 		}
 		.select2-selection__arrow {
 			background-color: $color-gray-3;
-			border-radius: 10px;
 			width: 50px;
+			top: 0;
 			b{
 				border-color: white transparent transparent transparent;
 			}
@@ -503,10 +503,13 @@ html{
 				}
 			}
 		}
+		.select2-dropdown--below, .select2-dropdown--above{
+			border-radius: 0;
+		}
 	}
 	.select2-results__option--highlighted[aria-selected]{
 		background-color: white;
-		color: $color-2;
+		color: $color-1;
 	}
 	.select2-results__option[aria-selected=true]{
 		background-color: inherit;

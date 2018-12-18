@@ -337,12 +337,17 @@
       $(".cnt-input").on( "keypress", function(e){
         //console.log(this, e);
       } )
-
     })();
 
-
-    
-
+    //Доп. Инпуты при регистраций для блогеров
+    $(".iwho-content input").on("change", function(){
+    	console.log(this);
+    	if($(this).hasClass("iblogger"))
+    		$(".add-inputs-blogger").addClass("show");
+    	else
+    		$(".add-inputs-blogger").removeClass("show");
+    })
+    $(".add-inputs-blogger").addClass("hide");
 
 
 		function onLoaded() {
@@ -391,9 +396,8 @@
 
 
 
-
+		/*nightmode*/
 		$("#nightmode-check").on("change", function( e, bool ){
-			console.log(this);
 			if( typeof bool == "boolean")
 				this.checked = bool;	
 			if( this.checked ){
