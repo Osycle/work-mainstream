@@ -7734,7 +7734,7 @@ table {
     -o-transition: none !important;
     transition: none !important; }
   .btn-opacity:hover {
-    border-color: #1ca19c; }
+    border-color: #b92048; }
   .btn-opacity.reverse {
     border-color: black;
     color: black; }
@@ -8819,19 +8819,37 @@ input.feedback-control {
 .mtype-icon-content {
   top: 10px;
   right: 13px;
+  color: white;
   position: absolute; }
 
 .mtype-icon {
   margin: 5px;
   font-size: 28px;
-  display: inline-block; }
+  display: block; }
 
 .icm-musical-note {
   font-size: 1em;
-  padding: 6px;
   border: 1px solid white;
   -webkit-border-radius: 50%;
-  border-radius: 50%; }
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .icm-musical-note:before {
+    width: 100%;
+    padding-right: 3px; }
 
 .icm-bookmark-normal, .icm-bookmark {
   font-size: 17px; }
@@ -8944,6 +8962,12 @@ input.feedback-control {
     .recomended-items figure .img {
       height: auto;
       min-height: 210px; } }
+
+.fuller-link {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  z-index: 1; }
 
 .weekarticles .flickity-btn-1 .flickity-prev-next-button {
   width: 20px; }
@@ -9343,6 +9367,10 @@ input.feedback-control {
 .panel-group .panel {
   -webkit-border-radius: 0;
   border-radius: 0; }
+
+.reg-form .iwho-content input:checked + label .btn-opacity {
+  background-color: #b92048;
+  color: white; }
 
 /* 
 		_footer.scss

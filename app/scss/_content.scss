@@ -15,18 +15,28 @@
 .mtype-icon-content{
 	top: 10px;
 	right: 13px;
+	color: white;
 	position:  absolute;
 }
 .mtype-icon{
 	margin: 5px;
 	font-size: 28px;
-	display: inline-block;
+	display: block;
 }
 .icm-musical-note{
 	font-size: 1em;
-	padding: 6px;
 	border: 1px solid white;
 	border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  &:before{
+  	width: 100%;
+    padding-right: 3px;
+  }
 }
 .icm-bookmark-normal, .icm-bookmark{
 	font-size: 17px;
@@ -162,7 +172,12 @@
 		}
 	}
 }
-
+.fuller-link{
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  z-index: 1;
+}
 
 
 //weekarticles
@@ -659,4 +674,25 @@
 }
 .panel-group .panel{
 	border-radius: 0;
+}
+
+
+
+
+.reg-form{
+	.viewnamefile{
+
+	}
+	.iwho-content{
+		input{
+			&:checked{
+				& + label{
+					.btn-opacity{
+						background-color: $color-1;
+						color: white;
+					}
+				}
+			}
+		}
+	}
 }

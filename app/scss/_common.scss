@@ -641,7 +641,7 @@ table {
 	}
 	box-shadow: inset 0 0 0px black, 0px 0px 0px 0px darken(white, 12%), 0px 0px 0px 0px $color-2;
 	&:hover{
-		border-color: $color-2;
+		border-color: $color-1;
 	}
 	&.reverse{
 		border-color: black;
