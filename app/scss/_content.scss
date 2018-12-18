@@ -696,3 +696,21 @@
 		}
 	}
 }
+
+
+.soon{
+	height: 100vh;
+	background-image: url('../img/bg/bg-soon.jpg');
+	background-size: cover;
+	background-position: center;
+	font-size: 0.9em;
+	#footer{
+		border-top: 1px solid rgba(white, 0.1);
+		.copy-content{
+			background-color: transparent;
+		}
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+	}
+}

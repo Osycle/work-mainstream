@@ -9372,6 +9372,21 @@ input.feedback-control {
   background-color: #b92048;
   color: white; }
 
+.soon {
+  height: 100vh;
+  background-image: url("../img/bg/bg-soon.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  font-size: 0.9em; }
+  .soon #footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    position: absolute;
+    bottom: 0; }
+    .soon #footer .copy-content {
+      background-color: transparent; }
+
 /* 
 		_footer.scss
 */
