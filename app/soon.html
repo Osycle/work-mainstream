@@ -31,7 +31,13 @@
 		<main data-aos="fade" data-aos-delay="0">
 
 			<div class="soon-content">
-				
+				<div class="soon-bg"></div>
+				<div class="align-center">
+						<div class="logo box-xs-10 text-center">
+							<img class="logo-def" src="img/logo-nm.svg" alt="" width="475">
+							<p>Скоро взлетаем...</p>
+						</div>					
+				</div>
 			</div>
 
 		</main><!-- ./MAIN -->
@@ -40,11 +46,21 @@
 			<div class="copy-content text-center-sm">
 				<div class="p-h-60">
 					<div class="row">
-						<div class="copyright col-md-6 p-v-10 p-h-15">
+						<div class="copyright col-md-4 p-v-10 p-h-15">
 							<p>© <time id="copydate">2018</time>. <span><i style="font-weight: 300;"><span class="color-1"><b>main</b></span>stream</i> Все права защищены</span></p>
 							<script>copydate.innerText = new Date().getFullYear()</script>
 						</div>
-						<div class="dev col-md-6 hidden-xs p-h-15 hidden-sm text-right-md p-v-10">
+						<div class="col-md-4 p-v-10 p-h-15">
+							<div class="header-socicons justify-c-center p-h-15 align-center">
+								<ul class=list>
+									<li><a href="" title="" target="_blank"><i class="icm-facebook-logo"></i></a></li>
+									<li><a href="" title="" target="_blank"><i class="icm-telegram"></i></a></li>
+									<li><a href="" title="" target="_blank"><i class="icm-instagram-logo"></i></a></li>
+									<li><a href="" title="" target="_blank"><i class="icm-youtube-logo"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="dev col-md-4 hidden-xs p-h-15 hidden-sm text-right-md p-v-10">
 							<p>
 								<a href="https://www.life-style.uz" class="link" title="Создание и продвижение сайтов">Создание сайтов <em><span class="color-1">Life </span></em>Style</a>
 							</p>
@@ -57,6 +73,12 @@
 	<!-- SCRIPTS -->
 	<script src="js/scripts.min.js"></script>
 	<script src="js/main.js"></script>
+	<script>
+	$(".soon-bg").on("mousemove", function(e){
+		$(this).css("background-position-x", (0 + (-e.pageX/100)))
+					 .css("background-position-y", (-0 + (-e.pageY/100)));
+	});
+	</script>
 </body>
 
 </html>

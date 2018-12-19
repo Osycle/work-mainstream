@@ -744,11 +744,34 @@
 /*soon*/
 .soon{
 	height: 100vh;
-	background-image: url('../img/bg/bg-soon.jpg');
-	background-size: cover;
-	background-position: center;
 	font-size: 0.9em;
+	font-family: sans-serif;
+	background-color: black;
+	.soon-content{
+		color: white;
+		.align-center{
+			height: 100vh;
+		}
+		.logo{
+			p{
+				margin-top: 10px;
+				font-size: 22px;
+			}
+		}
+	}
+	.soon-bg{
+		width: 110%;
+		height: 110%;
+		left: -5%;
+		position: absolute;
+		background-position: center;
+		background-image: url('../img/bg/bg-soon.jpg');
+		background-size: cover;
+		transition: all 0.1s ease;
+		background-repeat: no-repeat;
+	}
 	#footer{
+		z-index: 2;
 		border-top: 1px solid rgba(white, 0.1);
 		.copy-content{
 			background-color: transparent;

@@ -9446,12 +9446,31 @@ input.feedback-control {
 /*soon*/
 .soon {
   height: 100vh;
-  background-image: url("../img/bg/bg-soon.jpg");
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: center;
-  font-size: 0.9em; }
+  font-size: 0.9em;
+  font-family: sans-serif;
+  background-color: black; }
+  .soon .soon-content {
+    color: white; }
+    .soon .soon-content .align-center {
+      height: 100vh; }
+    .soon .soon-content .logo p {
+      margin-top: 10px;
+      font-size: 22px; }
+  .soon .soon-bg {
+    width: 110%;
+    height: 110%;
+    left: -5%;
+    position: absolute;
+    background-position: center;
+    background-image: url("../img/bg/bg-soon.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    -webkit-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    transition: all 0.1s ease;
+    background-repeat: no-repeat; }
   .soon #footer {
+    z-index: 2;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     width: 100%;
     position: absolute;
