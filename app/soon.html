@@ -28,15 +28,18 @@
 
 
 		<!-- MAIN -->
-		<main data-aos="fade" data-aos-delay="0">
+		<main data-aos="zoom-out" data-aos-delay="1000">
 
 			<div class="soon-content">
 				<div class="soon-bg"></div>
-				<div class="align-center">
-						<div class="logo box-xs-10 text-center">
-							<img class="logo-def" src="img/logo-nm.svg" alt="" width="475">
-							<p>Скоро взлетаем...</p>
-						</div>					
+				<div class="soon-bg-mousemove align-center">
+					<div class="soon-logo box-xs-10 text-center">
+						<img src="img/logo-nm.svg" alt="">
+						<p>Скоро взлетаем...</p>
+					</div>
+					<div class="cosmonaut">
+						<div class="img" style="background-image: url('img/other/cosmonaut.png');"></div>
+					</div>	
 				</div>
 			</div>
 
@@ -73,12 +76,7 @@
 	<!-- SCRIPTS -->
 	<script src="js/scripts.min.js"></script>
 	<script src="js/main.js"></script>
-	<script>
-	$(".soon-bg").on("mousemove", function(e){
-		$(this).css("background-position-x", (0 + (-e.pageX/100)))
-					 .css("background-position-y", (-0 + (-e.pageY/100)));
-	});
-	</script>
+
 </body>
 
 </html>

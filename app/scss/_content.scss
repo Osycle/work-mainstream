@@ -740,6 +740,22 @@
 
 
 
+@keyframes cosmonaut{
+	from, to{
+		transform: translate3d(0%, 5%, 0);
+	}
+	50%{
+		transform: translate3d(0%, 0%, 0);
+	}
+}
+@keyframes ligh{
+	from, to{
+		opacity: 0.5;
+	}
+	50%{
+		opacity: 0.9;
+	}
+}
 
 /*soon*/
 .soon{
@@ -751,11 +767,22 @@
 		color: white;
 		.align-center{
 			height: 100vh;
+			position: relative;
+			z-index: 1;
 		}
-		.logo{
-			p{
-				margin-top: 10px;
-				font-size: 22px;
+	}
+	.soon-logo{
+		transition: all 0.1s linear;
+		img{
+			width: 475px;
+		}
+		p{
+			margin-top: 10px;
+			font-size: 22px;
+		}
+		@media (max-width: 991px) {
+			img{
+				width: 80%;
 			}
 		}
 	}
@@ -767,7 +794,7 @@
 		background-position: center;
 		background-image: url('../img/bg/bg-soon.jpg');
 		background-size: cover;
-		transition: all 0.1s ease;
+		transition: all 0.15s linear;
 		background-repeat: no-repeat;
 	}
 	#footer{
@@ -779,6 +806,27 @@
 		width: 100%;
 		position: absolute;
 		bottom: 0;
+	}
+	.cosmonaut{
+		position: absolute;
+		bottom: 150px;
+		left: 20%;
+		transition: all 0.15s ease;
+		.img{
+			width: 376px;
+			height: 350px;
+			transition: all 0.15s ease;
+			animation: cosmonaut 4s ease-in-out infinite;
+			&:before{
+				@extend .claf;
+				background-image: url('../img/other/cosmonaut-lighting.png');
+				animation: ligh 4s ease-in-out infinite;
+				
+			}
+		}
+		@media (max-width: 991px) {
+			display: none !important;
+		}
 	}
 }
 

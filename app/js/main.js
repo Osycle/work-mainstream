@@ -350,6 +350,20 @@
     $(".add-inputs-blogger").addClass("hide");
 
 
+    /*Скоро*/
+    if($(".soon-bg-mousemove").length != 0){
+		  $(".soon-bg-mousemove").on("mousemove", function(e){
+				//$(".soon-bg").css("background-position-x", (0 + (-e.pageX/100))).css("background-position-y", (-0 + (-e.pageY/100)));
+
+				$(".soon-bg")	.css("transform", "translate(" +(-e.pageX/125)+"px, " +(-e.pageY/125)+ "px)")
+				$(".soon-logo")	.css("transform", "translate(" +(e.pageX/230)+"px, " +(e.pageY/230)+ "px)")
+				$(".cosmonaut")	.css("transform", "translate(" +(e.pageX/100)+"px, " +(e.pageY/75)+ "px)")
+														
+			});
+
+
+    }
+
 		function onLoaded() {
 			/*MASONRY*/
 			if ($(".grid-img").length != 0) {
