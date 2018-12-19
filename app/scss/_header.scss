@@ -510,6 +510,38 @@ ul[class*="sub-menu"]{
 		}
 	}
 }
+.rubric-li{
+	&>li{
+			&:nth-child(1){
+				color: $color-it;
+				font-weight: 500;
+			}
+			&:nth-child(2){
+				color: $color-career;
+				font-weight: 500;
+			}
+			&:nth-child(3){
+				color: $color-cybersport;
+				font-weight: 500;
+			}
+			&:nth-child(4){
+				color: $color-music;
+				font-weight: 500;
+			}
+			&:nth-child(5){
+				color: $color-self;
+				font-weight: 500;
+			}
+			&:nth-child(6){
+				color: $color-health;
+				font-weight: 500;
+			}
+			&:nth-child(7){
+				color: $color-training;
+				font-weight: 500;
+			}
+	}
+}
 
 // ---MODAL---
 .modal{

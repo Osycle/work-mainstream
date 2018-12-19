@@ -194,6 +194,23 @@
 		}
 
 	}
+	.weekarticles-items{
+		figure{
+			transition: all 0.3s ease;
+			filter: contrast(95%);
+			&.is-selected, &:hover{
+				filter: contrast(120%);
+			}
+		}
+		.img{
+			height: 140px;
+			background-size: cover;
+			background-position: center;
+			@media (max-width: 991px) {
+				background-size: contain;
+			}
+		}
+	}
 }
 .weekarticles-nav{
 	padding: 18px 30px;
@@ -217,11 +234,12 @@
 		}
 	}
 	.img{
-		height: 140px;
+		height: 210px;
 		background-size: cover;
 		background-position: center;
 		@media (max-width: 991px) {
-			background-size: contain;
+			//background-size: contain;
+			height: 180px;
 		}
 	}
 }
@@ -626,11 +644,7 @@
 
 //rubric
 .rubric{
-	.weekarticles-items{
-		.img{
-			height: 210px;
-		}
-	}
+
 }
 
 
@@ -696,13 +710,33 @@
 		}
 	}
 }
-.add-inputs-blogger{
-	
+//bloggers-article
+.blogger-face{
+	.blogger-face-content{
+		background: linear-gradient(to right, rgba(#000, 0.4 )-20%, #f1f1f1 35%, rgba(#fff, 0.0) ) ;
+		.align-i-center{
+			height: 260px;
+			.text-center{
+				@media (max-width: 991px) {
+					width: 100%;
+				}
+			}
+		}
+		.circle-ava{
+			border: 5px solid white;
+		}
+		@media (max-width: 991px) {
+			background: linear-gradient(to right, rgba(#000, 0.4 ) 60%, rgba(#fff, 0.0) ) ;
+		}
+	}
 }
-
-
-
-
+.list-rubric{
+	li{
+		display: inline-block;
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+}
 
 
 
@@ -722,5 +756,80 @@
 		width: 100%;
 		position: absolute;
 		bottom: 0;
+	}
+}
+
+.bar-advertising-content{
+	margin-bottom: 30px;
+}
+
+//personalarea
+.user-ava{
+	.img{
+		height: 220px;
+		background-size: cover;
+		background-position: bottom center;
+	}
+	@media (max-width: 991px) {
+		.img{
+			background-size: contain;
+		}
+	}
+}
+.user-btns{
+	.btn-def{
+		width: 170px;
+		&:hover{
+			background-color: $color-gray-2;
+		}
+		@media (max-width: 991px) {
+			width: auto;
+			display: block;
+			margin-top: 15px;
+			a.p-v-5{
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+		}
+	}
+	a{
+		justify-content: center;
+	}
+
+}
+.btn-addarticle{
+	background-color: #4d9e35;
+	[class*="icm"]{
+		font-size: 20px;
+	}
+}
+.btn-myarticles{
+	background-color: #3d7dae;
+	[class*="icm"]{
+		font-size: 22px;
+	}
+}
+.btn-fav{
+	background-color: $color-1;
+	[class*="icm"]{
+		font-size: 22px;
+		&:before, &:after{
+			color: inherit;
+		}
+	}
+}
+
+.user-info{
+	.panel-default{
+		border: none ;
+	}
+	.panel-heading{
+		border: 1px solid $color-gray-1;
+		border-radius: none;
+	}
+}
+.panel-body{
+	.select2-container{
+		min-width: 100%
 	}
 }

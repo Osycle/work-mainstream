@@ -22,7 +22,7 @@ $color-like: #FFC928;
 
 $color-gray-1: #d6d6d6;
 $color-gray-2: #8c8c8c;
-$color-gray-3: #282828;
+$color-gray-3: #454545;
 
 $bg-color-black: #000;
 $bg-color-gray: $color-gray-1;
@@ -1182,7 +1182,7 @@ body.nightmode{
 			color: white;
 		}
 	}
-	.pie-form-control{
+	.pie-form-control, .select2-container{
 		color: black;
 	}
 	.color-black, .parag-gray{
@@ -1241,5 +1241,8 @@ body.nightmode{
 		.icon-bar{
 			background-color: white;
 		}
+	}
+	.select2-container--default .select2-selection--single{
+		background-color: white;
 	}
 }

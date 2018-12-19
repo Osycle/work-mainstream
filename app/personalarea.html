@@ -263,241 +263,106 @@
 				  <ol class="breadcrumb  p-h-0 m-b-0 m-t-15 font-size-1">
 						<i class="fa fa-home color-gray-2 m-r-5"></i>
 				    <li><a href="">Главная</a></li>
-				    <li class="active"><a href="">О нас</a></li>
+				    <li class="active"><a href="">Личный кабинет</a></li>
 				  </ol>
 				</div>
 			</div>
 			<div class="container">
 				<div class="row">
 					<div class="column-left col-md-8 p-h-15">
-						<div class="news">
+						<div class="personalarea">
 							<div class="entry-header">
-								<h2>Блогеры</h2>
+								<h2>Мой профиль</h2>
 								<hr>
 							</div>
-							<div class="bloggers-items boxes-3 figure-m-v-15 parag-gray">
-								<figure>
-									<a href="bloggers-article.html">
-										<div class="hover-content hover">
+
+							<div class="entry-content">
+								<form action="" method="get" accept-charset="utf-8">
+									<div class="row">
+										<!-- user-ava -->
+										<div class="user-ava col-md-4 p-h-15 m-v-15">
 											<div class="img-content">
-												<div class="img" style="background-image: url('img/other/bloggers-def.jpg');"></div>
+												<div class="img" style="background-image: url('https://via.placeholder.com/240x220.jpg');"></div>
 											</div>
-											<div class="cell-hover align-i-end">
-												<div>
-													<h3>Псевдоним блогера</h3>
+											<div class="border-def box-xs-10">
+							  				<div class="viewnamefile p-h-15 text-center"></div>
+							  				<input id="useravatar" type="file" class="hide" onchange="this.previousElementSibling.innerText = this.files[0].name">
+											</div>
+											<span class="btn-def block bg-color-black">
+												<label id="avalabel" role="button" for="useravatar" class="btn-this p-v-5">Сменить аватар</label>
+											</span>
+										</div>
+										<!-- user-detail -->
+										<div class="user-detail col-md-8 p-h-15 m-v-15 color-gray-3 clearfix">
+											<p><b>Логин пользователя</b></p>
+											<div class="row">
+												<div class="col-md-8 p-h-15">
+													<div class="parag-m-v-10">
+														<p>Имя: <b>Имя Фамилия</b></p>
+														<p>Дата регистраций: <b>12.12.2019</b></p>
+														<p>Электронный адрес: <b>example@mail.ru</b></p>
+														<p>Мобильный телефон: <b>+998 90 345-11-33</b></p>
+													</div>
 												</div>
+												<div class="col-md-4 user-btns p-h-15">
+													<span class="btn-def m-v-5 bg-color btn-fav">
+														<a href="favorites.html" title="" class="align-i-center flex p-v-5"><span class="icm-bookmark-normal m-r-5"></span> Избранное</a>
+													</span>
+												</div>
+												
 											</div>
 										</div>
-									</a>
-									<div class="desc-content m-v-10">
-										<p>Краткий текст или краткая информация</p>
-									</div>
-									<div class="bloggers-themes flex m-t-5">
-										<div class="color-gray-2">Тематика:</div>
-										<ul class="list">
-											<li class="bg-color-training"><a href="rubric.html">Обучение</a></li> 
-											<li class="bg-color-career"><a href="rubric.html">Карьера</a></li> 
-										</ul>
-									</div>
-								</figure>
-								<figure>
-									<a href="bloggers-article.html">
-										<div class="hover-content hover">
-											<div class="img-content">
-												<div class="img" style="background-image: url('img/other/bloggers-def.jpg');"></div>
-											</div>
-											<div class="cell-hover align-i-end">
-												<div>
-													<h3>Псевдоним блогера</h3>
-												</div>
-											</div>
+										<!-- user-info -->
+										<div class="user-info col-md-12 p-h-15 m-v-15">
+											<div class="m-v-30 faq-accordion reg-form">
+											  <div class="panel panel-default">
+											    <div class="panel-heading">
+											      <h4 class="panel-title">
+											        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#faq-3" aria-expanded="false">Редактировать личные данные<i class="fa fa-caret-down"></i></a>
+											      </h4>
+											    </div>
+
+											    <div id="faq-3" class="panel-collapse collapse" role="tabpanel">
+											    	<!-- panel-body -->
+											      <div class="panel-body text-left p-v-10">
+
+															<div class="col-md-12 m-v-5 p-h-15">
+																<p>Имя и Фамилия</p>
+																<input type="text" class="pie-form-control" name="">
+															</div>
+															<div class="col-md-12 m-v-5 p-h-15">
+																<p>Логин</p>
+																<input type="text" class="pie-form-control" name="">
+															</div>
+															<div class="col-md-6 m-v-5 p-h-15">
+																<p>Пароль</p>
+																<input type="password" class="pie-form-control" name="">
+															</div>
+															<div class="col-md-6 m-v-5 p-h-15">
+																<p>Повторите пароль</p>
+																<input type="password" class="pie-form-control" name="">
+															</div>
+															<div class="col-md-12 m-v-5 p-h-15">
+																<p>Сменить ваш e-mail</p>
+																<input type="text" class="pie-form-control" name="">
+															</div>
+
+															<div class="col-md-12 p-h-15 text-right-md text-center-sm">
+																<span class="btn-def m-v-15">
+																	<button type="submit">Сохранить</button>
+																</span>
+															</div>
+
+											      </div>
+											    </div>
+											  </div>
+								  		</div>
 										</div>
-									</a>
-									<div class="desc-content m-v-10">
-										<p>Краткий текст или краткая информация</p>
+
 									</div>
-									<div class="bloggers-themes flex m-t-5">
-										<div class="color-gray-2">Тематика:</div>
-										<ul class="list">
-											<li class="bg-color-music"><a href="rubric.html">Музыка</a></li> 
-										</ul>
-									</div>
-								</figure>
-								<figure>
-									<a href="bloggers-article.html">
-										<div class="hover-content hover">
-											<div class="img-content">
-												<div class="img" style="background-image: url('img/other/bloggers-def.jpg');"></div>
-											</div>
-											<div class="cell-hover align-i-end">
-												<div>
-													<h3>Псевдоним блогера</h3>
-												</div>
-											</div>
-										</div>
-									</a>
-									<div class="desc-content m-v-10">
-										<p>Краткий текст или краткая информация</p>
-									</div>
-									<div class="bloggers-themes flex m-t-5">
-										<div class="color-gray-2">Тематика:</div>
-										<ul class="list">
-											<li class="bg-color-self"><a href="rubric.html">Самосознание</a></li> 
-											<li class="bg-color-cybersport"><a href="rubric.html">Киберспорт</a></li> 
-										</ul>
-									</div>
-								</figure>
-								<figure>
-									<a href="bloggers-article.html">
-										<div class="hover-content hover">
-											<div class="img-content">
-												<div class="img" style="background-image: url('img/other/bloggers-def.jpg');"></div>
-											</div>
-											<div class="cell-hover align-i-end">
-												<div>
-													<h3>Псевдоним блогера</h3>
-												</div>
-											</div>
-										</div>
-									</a>
-									<div class="desc-content m-v-10">
-										<p>Краткий текст или краткая информация</p>
-									</div>
-									<div class="bloggers-themes flex m-t-5">
-										<div class="color-gray-2">Тематика:</div>
-										<ul class="list">
-											<li class="bg-color-music"><a href="rubric.html">МУзыка</a></li> 
-											<li class="bg-color-cybersport"><a href="rubric.html">Киберспорт</a></li> 
-										</ul>
-									</div>
-								</figure>
-								<figure>
-									<a href="bloggers-article.html">
-										<div class="hover-content hover">
-											<div class="img-content">
-												<div class="img" style="background-image: url('img/other/bloggers-def.jpg');"></div>
-											</div>
-											<div class="cell-hover align-i-end">
-												<div>
-													<h3>Псевдоним блогера</h3>
-												</div>
-											</div>
-										</div>
-									</a>
-									<div class="desc-content m-v-10">
-										<p>Краткий текст или краткая информация</p>
-									</div>
-									<div class="bloggers-themes flex m-t-5">
-										<div class="color-gray-2">Тематика:</div>
-										<ul class="list">
-											<li class="bg-color-health"><a href="rubric.html">Здоровье</a></li> 
-											<li class="bg-color-career"><a href="rubric.html">Карьера</a></li> 
-										</ul>
-									</div>
-								</figure>
-								<figure>
-									<a href="bloggers-article.html">
-										<div class="hover-content hover">
-											<div class="img-content">
-												<div class="img" style="background-image: url('img/other/bloggers-def.jpg');"></div>
-											</div>
-											<div class="cell-hover align-i-end">
-												<div>
-													<h3>Псевдоним блогера</h3>
-												</div>
-											</div>
-										</div>
-									</a>
-									<div class="desc-content m-v-10">
-										<p>Краткий текст или краткая информация</p>
-									</div>
-									<div class="bloggers-themes flex m-t-5">
-										<div class="color-gray-2">Тематика:</div>
-										<ul class="list">
-											<li class="bg-color-health"><a href="rubric.html">Здоровье</a></li> 
-										</ul>
-									</div>
-								</figure>
-								<figure>
-									<a href="bloggers-article.html">
-										<div class="hover-content hover">
-											<div class="img-content">
-												<div class="img" style="background-image: url('img/other/bloggers-def.jpg');"></div>
-											</div>
-											<div class="cell-hover align-i-end">
-												<div>
-													<h3>Псевдоним блогера</h3>
-												</div>
-											</div>
-										</div>
-									</a>
-									<div class="desc-content m-v-10">
-										<p>Краткий текст или краткая информация</p>
-									</div>
-									<div class="bloggers-themes flex m-t-5">
-										<div class="color-gray-2">Тематика:</div>
-										<ul class="list">
-											<li class="bg-color-self"><a href="rubric.html">Самосознание</a></li> 
-										</ul>
-									</div>
-								</figure>
-								<figure>
-									<a href="bloggers-article.html">
-										<div class="hover-content hover">
-											<div class="img-content">
-												<div class="img" style="background-image: url('img/other/bloggers-def.jpg');"></div>
-											</div>
-											<div class="cell-hover align-i-end">
-												<div>
-													<h3>Псевдоним блогера</h3>
-												</div>
-											</div>
-										</div>
-									</a>
-									<div class="desc-content m-v-10">
-										<p>Краткий текст или краткая информация</p>
-									</div>
-									<div class="bloggers-themes flex m-t-5">
-										<div class="color-gray-2">Тематика:</div>
-										<ul class="list">
-											<li class="bg-color-cybersport"><a href="rubric.html">Киберспорт</a></li> 
-										</ul>
-									</div>
-								</figure>
-								<figure>
-									<a href="bloggers-article.html">
-										<div class="hover-content hover">
-											<div class="img-content">
-												<div class="img" style="background-image: url('img/other/bloggers-def.jpg');"></div>
-											</div>
-											<div class="cell-hover align-i-end">
-												<div>
-													<h3>Псевдоним блогера</h3>
-												</div>
-											</div>
-										</div>
-									</a>
-									<div class="desc-content m-v-10">
-										<p>Краткий текст или краткая информация</p>
-									</div>
-									<div class="bloggers-themes flex m-t-5">
-										<div class="color-gray-2">Тематика:</div>
-										<ul class="list">
-											<li class="bg-color-training"><a href="rubric.html">Обучение</a></li> 
-											<li class="bg-color-cybersport"><a href="rubric.html">Киберспорт</a></li> 
-										</ul>
-									</div>
-								</figure>
+								</form>
 							</div>
-							<div class="pagination-div m-v-30 col-xs-12 text-center">
-							  <ul class="pagination">
-							    <li><a href=""><i class="fa fa-angle-left"></i></a></li>
-							    <li><a href="">1</a></li>
-							    <li class="active"><a href="">2</a></li>
-							    <li><a href="">3</a></li>
-							    <li><a href=""><i class="fa fa-angle-right"></i></a></li>
-							  </ul>
-							</div>
+
 						</div>
 					</div>
 					<div class="column-right col-md-4 p-h-15">
