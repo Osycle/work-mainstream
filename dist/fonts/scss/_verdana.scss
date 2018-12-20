@@ -1,0 +1,20 @@
+/* Verdana */
+@font-face {
+	font-family: 'Verdana';
+	font-weight: bold;
+	src: url($path+'Verdanabold.eot');
+	src: url($path+'Verdanabold.eot') format('embedded-opentype'),
+		 url($path+'Verdanabold.woff2') format('woff2'),
+		 url($path+'Verdanabold.woff') format('woff'),
+		 url($path+'Verdanabold.ttf') format('truetype'),
+		 url($path+'Verdanabold.svg#Verdanabold') format('svg');
+}
+@font-face {
+	font-family: 'Verdana';
+	src: url($path+'Verdanaregular.eot');
+	src: url($path+'Verdanaregular.eot') format('embedded-opentype'),
+		 url($path+'Verdanaregular.woff2') format('woff2'),
+		 url($path+'Verdanaregular.woff') format('woff'),
+		 url($path+'Verdanaregular.ttf') format('truetype'),
+		 url($path+'Verdanaregular.svg#Verdanaregular') format('svg');
+}
