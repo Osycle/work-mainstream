@@ -418,10 +418,15 @@
 				$('[for="nightmode-check"]').addClass("checked")
 				$("body").addClass("nightmode");
 				nightmodeChange(true);
+				
+				setTimeout(function(){$("#min-menu").addClass("mm-theme-dark").removeClass("mm-theme-white");}, 1)
+				console.log($("#min-menu"))
 			}else{
 				$('[for="nightmode-check"]').removeClass("checked")
 				$("body").removeClass("nightmode");
 				nightmodeChange(false);
+				
+				setTimeout(function(){$("#min-menu").addClass("mm-theme-white").removeClass("mm-theme-dark");}, 1)
 			}
 		});
 		function nightmodeChange(status){

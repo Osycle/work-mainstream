@@ -1245,4 +1245,19 @@ body.nightmode{
 	.select2-container--default .select2-selection--single{
 		background-color: white;
 	}
+	//jplayer
+	.article-player .jp-interface{
+		background-color: $nightcolor;
+	}
+	.jp-audio .jp-type-playlist .jp-time-holder{
+		color: #f11d54;
+	}
+	.article-player .jp-details, .article-player .jp-playlist, .jp-playlist li{
+		background-color: $nightcolor;
+		border-color: darken($color-gray-1, 50%);
+		a{
+			color: white !important;
+		}
+	}
+	
 }

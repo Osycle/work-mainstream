@@ -475,13 +475,46 @@
 	div.jp-type-playlist div.jp-playlist a.jp-playlist-current, div.jp-type-playlist div.jp-playlist a:hover{
 		color: $color-1;
 	}
-	.jp-audio .jp-controls{
-		//width: 100%;
-	}
+
 	.jp-interface{
 		background-color: white;
 	}
+	@media (max-width: 991px){
+		.jp-audio .jp-controls{
+    	display: flex;
+    	justify-content: center;
+		}
+		.jp-audio{
+			width: 100%;
+		}
+		.jp-playlist{
+			text-align: left;
+		}
+		.jp-audio .jp-interface{
+			height: auto;
+		}
+		.jp-audio .jp-type-playlist .jp-progress{
+	    left: 0;
+	    width: 100%;
+	    position: relative;
+	    margin-top: 15px;
+	    top: 0;
+		}
+		.jp-audio .jp-type-playlist .jp-time-holder{
+	    left: 0;
+	    width: 100%;
+	    position: relative;
+    	height: 20px;
+	    top: 0;
+		}
+		.jp-toggles{
+			display: none;
+		}
+	}
 }
+
+
+
 .article-video{
 	iframe{
 		width: 100%;

@@ -449,6 +449,10 @@ ul[class*="sub-menu"]{
 	}
 	.min-menu-bar{
 		padding: 5px 0;
+		height: 100%;
+		align-items: center;
+		justify-content: flex-end;
+		display: flex;
 		.bar{
 			transform: scale(0.8);
 		}
@@ -546,51 +550,6 @@ ul[class*="sub-menu"]{
 	}
 }
 
-// ---MODAL---
-.modal{
-	@media(max-width:991px ) {
-		.flexalign-i-center{
-			display: block;
-		}
-	}
-}
-.modal-dialog{
-		width: 400px;
-   // margin: 50px 50wv;
-		@media only screen and (max-width: 991px){
-			width: 75%;
-			margin: 50px auto;
-			margin-top: 25%;
-			margin-bottom: 5%;
-		}
-		@media only screen and (max-width: 767px){
-			width: 90%;
-			margin: 50px auto;
-			margin-top: 25%;
-			margin-bottom: 5%;
-		}
-	.btn{
-		background-color: transparent;
-		position: relative;
-		float: right;
-		display: block;
-		color: black;
-		width: 42px;
-		height: 50px;
-		right: -5px;
-    top: -5px;
-    z-index: 1;
-    border-radius: 0 5px;
-  	&:focus, &:active{
-  		outline: none;
-			box-shadow: none;
-		}
-	}
-	.icon-bar{
-		background-color: $color-1;
-	}
-}
-
 
 .bar{
 	width: 60px;
@@ -600,14 +559,17 @@ ul[class*="sub-menu"]{
 }
 .icon-bar{
 	width: 100%;
-	background-color: #333;
-	height: 1px;
-	position: relative;
-	display: block;
-	margin: 14px 0;
-	&:first-child{
-		//margin-top: 14px;
-	}
+  background-color: #333;
+  height: 6px;
+  position: relative;
+  display: block;
+  margin: 8px 0;
+  margin-left: auto;
+  width: 45px;
+	&:nth-child(1){background-color: $color-1;}
+	&:nth-child(2){background-color: rgba($color-1, 0.75);}
+	&:nth-child(3){background-color: rgba($color-1, 0.5);}
+
 }
 .close-content{
 	.icon-bar{
