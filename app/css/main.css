@@ -7945,6 +7945,7 @@ h2 {
 
 h3 {
   font-weight: 600;
+  line-height: 130%;
   font-size: 1.2em; }
   @media (max-width: 430px) {
     h3 {
@@ -8438,12 +8439,14 @@ body.nightmode {
       transition: all 0.3s ease;
       position: relative;
       z-index: 2; }
-    .menu li a:hover, .menu li.active {
+    .menu li a:hover {
       color: #1ca19c; }
-      .menu li a:hover:before, .menu li a:hover:after, .menu li.active:before, .menu li.active:after {
+      .menu li a:hover:before, .menu li a:hover:after {
         -webkit-transform: scaleX(0.5);
         -ms-transform: scaleX(0.5);
         transform: scaleX(0.5); }
+    .menu li.active {
+      color: white; }
 
 ul[class*="sub-menu"] {
   position: absolute;
@@ -8895,6 +8898,8 @@ input.feedback-control {
 @media (max-width: 991px) {
   .date {
     display: block;
+    margin-left: 0;
+    font-size: 0.7em;
     margin-top: 5px; } }
 
 .bnr-entry {
@@ -8989,9 +8994,46 @@ input.feedback-control {
     background-size: cover;
     height: 210px; }
   @media (max-width: 991px) {
-    .recomended-items figure .img {
-      height: auto;
-      min-height: 210px; } }
+    .recomended-items figure {
+      text-align: left; }
+      .recomended-items figure .img {
+        height: auto;
+        min-height: 210px; }
+      .recomended-items figure .date {
+        margin-left: 0; }
+      .recomended-items figure .cell-hover {
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+        align-items: flex-start; }
+        .recomended-items figure .cell-hover > div {
+          height: 100%;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column; }
+          .recomended-items figure .cell-hover > div > div {
+            -webkit-flex-basis: 100%;
+            -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+            -webkit-box-align: start;
+            -webkit-align-items: flex-start;
+            -ms-flex-align: start;
+            align-items: flex-start; }
+          .recomended-items figure .cell-hover > div h3, .recomended-items figure .cell-hover > div p {
+            -webkit-box-flex: 1;
+            -webkit-flex: 1 1;
+            -ms-flex: 1 1;
+            flex: 1 1;
+            -webkit-box-align: end;
+            -webkit-align-items: flex-end;
+            -ms-flex-align: end;
+            align-items: flex-end; } }
 
 .fuller-link {
   width: 100%;
