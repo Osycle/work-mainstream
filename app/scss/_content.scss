@@ -54,7 +54,12 @@
 		color: $color-1;
 	}
 }
-
+.date{
+	@media (max-width: 991px) {
+		display: block;
+		margin-top: 5px;
+	}
+}
 
 .bnr-entry{
 	color: white;

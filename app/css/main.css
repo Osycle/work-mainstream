@@ -8404,9 +8404,9 @@ body.nightmode {
         background-color: #80c52c; }
       .menu ul:not([class*="sub-menu"]) > li:nth-child(7):hover > a, .menu ul:not([class*="sub-menu"]) > li:nth-child(7).active > a {
         background-color: #f66729; }
-      .menu ul:not([class*="sub-menu"]) > li:hover > a, .menu ul:not([class*="sub-menu"]) > li.active > a {
+      .menu ul:not([class*="sub-menu"]) > li:hover > a {
         color: white; }
-      .menu ul:not([class*="sub-menu"]) > li:hover .sub-menu-1, .menu ul:not([class*="sub-menu"]) > li.active .sub-menu-1 {
+      .menu ul:not([class*="sub-menu"]) > li:hover .sub-menu-1 {
         -webkit-transform: none;
         -ms-transform: none;
         transform: none;
@@ -8419,14 +8419,14 @@ body.nightmode {
         -o-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
         transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
         transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out; }
-        .menu ul:not([class*="sub-menu"]) > li:hover .sub-menu-1, .menu ul:not([class*="sub-menu"]) > li:hover .sub-menu-1 li, .menu ul:not([class*="sub-menu"]) > li:hover .sub-menu-1 a, .menu ul:not([class*="sub-menu"]) > li.active .sub-menu-1, .menu ul:not([class*="sub-menu"]) > li.active .sub-menu-1 li, .menu ul:not([class*="sub-menu"]) > li.active .sub-menu-1 a {
+        .menu ul:not([class*="sub-menu"]) > li:hover .sub-menu-1, .menu ul:not([class*="sub-menu"]) > li:hover .sub-menu-1 li, .menu ul:not([class*="sub-menu"]) > li:hover .sub-menu-1 a {
           pointer-events: auto !important; }
-      .menu ul:not([class*="sub-menu"]) > li:hover .productions-sub-menu, .menu ul:not([class*="sub-menu"]) > li.active .productions-sub-menu {
+      .menu ul:not([class*="sub-menu"]) > li:hover .productions-sub-menu {
         -webkit-transform: inherit;
         -ms-transform: inherit;
         transform: inherit;
         opacity: 1; }
-        .menu ul:not([class*="sub-menu"]) > li:hover .productions-sub-menu figure, .menu ul:not([class*="sub-menu"]) > li.active .productions-sub-menu figure {
+        .menu ul:not([class*="sub-menu"]) > li:hover .productions-sub-menu figure {
           -webkit-transform: scale(1);
           -ms-transform: scale(1);
           transform: scale(1); }
@@ -8891,6 +8891,11 @@ input.feedback-control {
   color: #d6d6d6; }
   .fa-star.fill {
     color: #b92048; }
+
+@media (max-width: 991px) {
+  .date {
+    display: block;
+    margin-top: 5px; } }
 
 .bnr-entry {
   color: white; }
