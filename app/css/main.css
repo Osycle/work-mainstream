@@ -6998,6 +6998,7 @@ tbody.collapse.in {
   color: white;
   padding-top: 2px;
   padding-bottom: 2px;
+  font-size: 12px;
   display: inline-block;
   vertical-align: middle; }
 
@@ -7321,15 +7322,15 @@ table {
   border-radius: 15px;
   border: 1px solid #454545; }
 
-.fuller, .claf, [data-flicker]:before, .h1-style:not(.h-clear):not(.after-not):after, .h-style-1:after, .h-style-1:before, .checkbox-style-1:before, .form-def .cap-content:before, .soon .cosmonaut .img:before, .cell-hover, .hover-content .cell-hover {
+.fuller, .claf, [data-flicker]:before, .h1-style:not(.h-clear):not(.after-not):after, .h-style-1:after, .h-style-1:before, .checkbox-style-1:before, .menu ul:not([class*="sub-menu"]) > li:before, .form-def .cap-content:before, .soon .cosmonaut .img:before, .cell-hover, .hover-content .cell-hover {
   height: 100%;
   position: absolute;
   top: 0;
   left: 0; }
-  .fuller:not([class*="col-"]), .claf:not([class*="col-"]), :not([class*="col-"])[data-flicker]:before, .h1-style:not([class*="col-"]):not(.h-clear):not(.after-not):after, .h-style-1:not([class*="col-"]):after, .h-style-1:not([class*="col-"]):before, .checkbox-style-1:not([class*="col-"]):before, .form-def .cap-content:not([class*="col-"]):before, .soon .cosmonaut .img:not([class*="col-"]):before, .cell-hover:not([class*="col-"]) {
+  .fuller:not([class*="col-"]), .claf:not([class*="col-"]), :not([class*="col-"])[data-flicker]:before, .h1-style:not([class*="col-"]):not(.h-clear):not(.after-not):after, .h-style-1:not([class*="col-"]):after, .h-style-1:not([class*="col-"]):before, .checkbox-style-1:not([class*="col-"]):before, .menu ul:not([class*="sub-menu"]) > li:not([class*="col-"]):before, .form-def .cap-content:not([class*="col-"]):before, .soon .cosmonaut .img:not([class*="col-"]):before, .cell-hover:not([class*="col-"]) {
     width: 100%; }
 
-.claf, [data-flicker]:before, .h1-style:not(.h-clear):not(.after-not):after, .h-style-1:after, .h-style-1:before, .checkbox-style-1:before, .form-def .cap-content:before, .soon .cosmonaut .img:before {
+.claf, [data-flicker]:before, .h1-style:not(.h-clear):not(.after-not):after, .h-style-1:after, .h-style-1:before, .checkbox-style-1:before, .menu ul:not([class*="sub-menu"]) > li:before, .form-def .cap-content:before, .soon .cosmonaut .img:before {
   content: " "; }
 
 .clafclear {
@@ -8385,8 +8386,7 @@ body.nightmode {
     .menu ul:not([class*="sub-menu"]) > li {
       display: inline-block;
       position: relative;
-      letter-spacing: 0;
-      border-right: 1px solid #d6d6d6; }
+      letter-spacing: 0; }
       .menu ul:not([class*="sub-menu"]) > li > a {
         display: block;
         padding: 16px 20px;
@@ -8405,6 +8405,11 @@ body.nightmode {
         background-color: #80c52c; }
       .menu ul:not([class*="sub-menu"]) > li:nth-child(7):hover > a, .menu ul:not([class*="sub-menu"]) > li:nth-child(7).active > a {
         background-color: #f66729; }
+      .menu ul:not([class*="sub-menu"]) > li:before {
+        background-color: #d6d6d6;
+        height: 30px;
+        top: 11px;
+        width: 1px !important; }
       .menu ul:not([class*="sub-menu"]) > li:hover > a {
         color: white; }
       .menu ul:not([class*="sub-menu"]) > li:hover .sub-menu-1 {
@@ -8706,7 +8711,7 @@ textarea.form-control {
   position: relative;
   color: #1ca19c; }
   .search-nav-content .fa, .search-nav-content .icm-magnifier, .input-btnin .fa, .input-btnin .icm-magnifier {
-    color: #8c8c8c;
+    color: white;
     font-size: 18px; }
   .search-nav-content .search-input, .input-btnin .search-input {
     height: inherit;
@@ -8714,6 +8719,7 @@ textarea.form-control {
     border: none; }
   .search-nav-content input, .input-btnin input {
     border: 0;
+    height: 52px !important;
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
@@ -8721,7 +8727,7 @@ textarea.form-control {
     height: 100%;
     width: 100%;
     padding: 0 15px; }
-    .search-nav-content input:focus ~ button, .input-btnin input:focus ~ button {
+    .search-nav-content input ~ button, .input-btnin input ~ button {
       right: 0;
       color: #b92048 !important; }
     .search-nav-content input::-moz-placeholder, .input-btnin input::-moz-placeholder {
@@ -8735,9 +8741,9 @@ textarea.form-control {
       border: 0;
       background-color: transparent; }
   .search-nav-content button, .input-btnin button {
-    background-color: transparent;
+    background-color: #b92048;
     color: white;
-    padding: 9px 10px;
+    padding: 9px 18px;
     font-size: 1em;
     height: 100%;
     border: 0;
@@ -8895,12 +8901,14 @@ input.feedback-control {
   .fa-star.fill {
     color: #b92048; }
 
-@media (max-width: 991px) {
-  .date {
-    display: block;
-    margin-left: 0;
-    font-size: 0.7em;
-    margin-top: 5px; } }
+.date {
+  font-size: 12px; }
+  @media (max-width: 991px) {
+    .date {
+      display: block;
+      margin-left: 0;
+      font-size: 0.7em;
+      margin-top: 5px; } }
 
 .bnr-entry {
   color: white; }

@@ -236,7 +236,7 @@ $header-min-menu: 70px;
 			display: inline-block;
 			position: relative;
 			letter-spacing: 0;
-			border-right: 1px solid $color-gray-1;
+			//border-right: 1px solid $color-gray-1;
 			& > a{
 				display: block;
 				padding: 16px 20px;
@@ -250,7 +250,13 @@ $header-min-menu: 70px;
 			&:nth-child(5){&:hover, &.active{&>a{background-color: $color-self;}}}
 			&:nth-child(6){&:hover, &.active{&>a{background-color: $color-health;}}}
 			&:nth-child(7){&:hover, &.active{&>a{background-color: $color-training;}}}
-
+			&:before{
+				@extend .claf;
+				background-color: $color-gray-1;
+				height: 30px;
+				top: 11px;
+				width: 1px !important;
+			}
 			&:hover{
 				&>a{
 					color: white;
@@ -609,7 +615,7 @@ textarea.form-control{
 	position: relative;
 	color: $color-2;
 	.fa, .icm-magnifier{
-		color: $color-gray-2;
+		color: white;
 		font-size: 18px;
 	}
 	.search-input{
@@ -622,24 +628,25 @@ textarea.form-control{
 	}
 	input{
 		border: 0;
+		height: 52px !important;
 		transition: all 0.3s ease;
 		background-color: rgba(white, 1);
 		height: 100%;
 		width: 100%;
 		padding: 0 15px;
-		&:focus{
+		//&:focus{
 			& ~ button{
 				right: 0;
 				color: $color-1 !important;
 			}
-		}
+		//}
 		@include placeholder-color($color-gray-2);
 	}
 	
 	button{
-		background-color: transparent;
+		background-color: $color-1;
 		color: white;
-    padding: 9px 10px;
+    padding: 9px 18px;
 	  font-size: 1em;
     height: 100%;
     border: 0;
