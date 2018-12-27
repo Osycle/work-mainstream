@@ -601,7 +601,6 @@ table {
 .btn-def, .btn-icon{
 	@extend .btn-style;
 	@extend .hover-style-1;
-	//transition: box-shadow 0.1s steps(4);
 	*{
 		color: inherit;
 	}
@@ -613,7 +612,7 @@ table {
 		background-color: $color-1;
 	}
 	&:not(.changecolor-none):hover{
-		background-color: $color-3;
+		background-color: lighten($color-1, 7%);
 		color: white;
 	}
 	&.radius{
@@ -979,7 +978,7 @@ main{
 		font-size: 1em;
 		//font-weight: 400;
 		position: relative;
-		line-height: 170%;
+		line-height: 140%;
 	}
 	ul:not([class]){
 		text-align: left;

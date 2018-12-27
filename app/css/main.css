@@ -7711,7 +7711,7 @@ table {
   .btn-def:not([class*="bg-color"]), .btn-icon:not([class*="bg-color"]) {
     background-color: #b92048; }
   .btn-def:not(.changecolor-none):hover, .btn-icon:not(.changecolor-none):hover {
-    background-color: #3a82db;
+    background-color: #d72554;
     color: white; }
   .btn-def.radius, .btn-icon.radius {
     -webkit-border-radius: 20px;
@@ -8004,7 +8004,7 @@ main {
   main p {
     font-size: 1em;
     position: relative;
-    line-height: 170%; }
+    line-height: 140%; }
   main ul:not([class]) {
     text-align: left;
     margin-top: 10px;
@@ -8906,9 +8906,10 @@ input.feedback-control {
   @media (max-width: 991px) {
     .date {
       display: block;
-      margin-left: 0;
       font-size: 0.7em;
-      margin-top: 5px; } }
+      margin-top: 5px; }
+      .date.m-l-15 {
+        margin-left: 0; } }
 
 .bnr-entry {
   color: white; }
@@ -9112,6 +9113,9 @@ input.feedback-control {
     width: 100%; }
   .arinfo .active {
     color: #b92048; }
+  @media (max-width: 991px) {
+    .arinfo {
+      width: 100%; } }
 
 .subscribe-content .wrapper {
   border-top: 5px solid #b92048;
@@ -9198,6 +9202,8 @@ input.feedback-control {
   background-position: center; }
 
 @media (max-width: 991px) {
+  .popular-articles-items figure {
+    text-align: left; }
   .popular-articles-items .desc-content {
     margin-top: 10px; } }
 
@@ -9742,6 +9748,9 @@ input.feedback-control {
   .socicons i {
     display: inline-block;
     width: 22px; }
+
+.footer-logo {
+  font-size: 12px; }
 
 .copy-content {
   background-color: #454545;

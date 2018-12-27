@@ -54,13 +54,20 @@
 		color: $color-1;
 	}
 }
+.date-panel{
+	@media (max-width: 991px) {
+
+	}
+}
 .date{
 	font-size: 12px;
 	@media (max-width: 991px) {
 		display: block;
-		margin-left: 0;
 		font-size: 0.7em;
 		margin-top: 5px;
+		&.m-l-15{
+			margin-left: 0;
+		}
 	}
 }
 
@@ -278,6 +285,9 @@
 	.active{
 		color: $color-1;
 	}
+	@media (max-width: 991px) {
+		width: 100%;
+	}
 }
 
 
@@ -349,6 +359,7 @@
 
 //popular-articles
 .popular-articles-items{
+
 	figure{
 		transition: all 0.3s ease;
 		filter: contrast(95%);
@@ -362,6 +373,9 @@
 		background-position: center;
 	}
 	@media (max-width: 991px) {
+		figure{
+			text-align: left;
+		}
 		.desc-content{
 			margin-top: 10px;
 		}
@@ -482,7 +496,7 @@
 
 //rubric-article
 .rubric-article{
-	padding: 20px 30px;
+	padding: 20px 30px;	
 }
 
 .article-player{
