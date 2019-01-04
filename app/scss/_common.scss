@@ -263,8 +263,8 @@ html{
 	}
 	@media (max-width:991px) {
 		li{
-			width: 100%;
-			display: block;
+			//width: 100%;
+			//display: block;
 		}
 	}
 }
@@ -1209,6 +1209,9 @@ body.nightmode{
 				color: lighten($nightcolor, 50%); 
 			}
 		}
+	}
+	.menu ul:not([class*="sub-menu"]) > li:before{
+		background: lighten($nightcolor, 20%);
 	}
 	.tags, .share-li{
 		li{

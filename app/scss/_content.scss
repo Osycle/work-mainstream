@@ -54,6 +54,11 @@
 		color: $color-1;
 	}
 }
+.container.p-b-30{
+	@media (max-width: 991px) {
+		padding-bottom: 0;
+	}
+}
 .date-panel{
 	@media (max-width: 991px) {
 
@@ -238,9 +243,11 @@
 			height: 140px;
 			background-size: cover;
 			background-position: center;
-			@media (max-width: 991px) {
-				background-size: contain;
-			}
+		}
+	}
+	@media (max-width: 991px) {
+		&.p-b-30{
+			padding-bottom: 0;
 		}
 	}
 }
@@ -252,9 +259,6 @@
 	}
 	.is-selected{
 		color: $color-1;
-	}
-	@media (max-width: 991px) {
-
 	}
 }
 .weekarticles-items{
@@ -269,12 +273,10 @@
 		height: 210px;
 		background-size: cover;
 		background-position: center;
-		@media (max-width: 991px) {
-			//background-size: contain;
-			height: 180px;
-		}
+
 	}
 }
+
 .arinfo{
 	color: $color-gray-2;
 	font-size: 0.88em;
@@ -286,7 +288,7 @@
 		color: $color-1;
 	}
 	@media (max-width: 991px) {
-		width: 100%;
+		//width: 100%;
 	}
 }
 
@@ -334,13 +336,54 @@
 		padding: 10px 15px;
 	}
 }
-
+//tg
+.tg-widdget-content{
+	@media (max-width: 991px){
+		
+			display: none;
+		
+	}
+}
 //tags-content
 .tags-content{
 	padding: 30px 20px;
 	padding-top: 20px;
 }
-
+.tags{
+	position: relative;
+	@media (max-width: 991px){
+		margin-top: 10px;
+		margin-bottom: 10px;
+		.va-middle-inline.m-r-offset{
+			display: none;
+		}
+		.tags-li{
+			font-size: 12px;
+			li{
+				&:nth-child(1):before{
+					position: absolute;
+					left: -23px;
+					top: 4px;
+					content: "";
+					width: 20px;
+			    font-size: 18px;
+			    color: #8c8c8c;
+			    font-family: "icomoon" !important;
+			    speak: none;
+			    font-style: normal;
+			    font-weight: normal;
+			    font-variant: normal;
+			    text-transform: none;
+			    line-height: 1;
+			    -webkit-font-smoothing: antialiased;
+				}
+			}
+			@media (max-width: 991px) {
+				text-align: left;
+			}
+		}
+	}
+}
 .bar-advertising-content{
 	.img-content{
 		transition: 0.4s;
@@ -356,8 +399,25 @@
 	}
 }
 
-
+.m-font-size{
+	@media (max-width: 991px) {
+		h2{
+			font-size: 0.93em;
+		}
+		.btn-def{
+			font-size: 0.8em;
+		}
+	}
+}
 //popular-articles
+.popular-articles{
+	@media (max-width: 990px){
+		&[class*='m-v']{
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+}
 .popular-articles-items{
 
 	figure{
@@ -385,6 +445,12 @@
 
 //short-news
 .short-news{
+	@media (max-width: 991px) {
+		&[class*='m-v']{
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
 	figure{
 		transition: 0.3s;
 		&:hover{
@@ -443,10 +509,6 @@
 		height: 210px;
 		background-position: center;
 		background-size: cover;
-		@media (max-width: 991px) {
-			background-size: contain;
-			height: 180px;
-		}
 	}
 }
 
@@ -460,7 +522,6 @@
 			background-image: url('../img/other/bloggers-def.jpg');
 			background-position: center;
 			background-size: cover;
-			//background-color: gray;
 			height: 180px;
 		}
 	}
@@ -493,10 +554,90 @@
 	}
 }
 
+.weekarticles-items, .news-items, .popular-articles-items{
+
+	@media (max-width: 991px) {
+		.arinfo{
+			text-align: center;
+		}
+		.top-panel{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.desc-content{
+			text-align: left;
+		}
+		.img-content{
+			.img{
+				height: 180px;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+.tolike{
+	&:not(.fixed){
+		display: none;
+	}
+}
+.tolike.fixed{
+	position: fixed;
+	z-index: 12;
+	bottom: 10px;
+	right: 15px;
+	padding-left: 0;
+	height: 50px;
+	padding-right: 0;
+	margin: 0;
+	text-align: center;
+	.btn-like{
+		width: 100%;
+		border-radius: 50%;
+		overflow: hidden;
+		.btn-this{
+			height: 50px;
+			width: 50px;
+			padding: 0 !important;
+		}
+		.icm-smile, .icm-smiling{
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+	@media (min-width: 991px){
+		display: none;
+	}
+}
+
 
 //rubric-article
 .rubric-article{
 	padding: 20px 30px;	
+	@media (max-width: 991px) {
+		padding: 20px 10px;
+		.date-panel{
+			margin-top: 5px;
+			margin-bottom: 5px;
+			display: flex !important;
+			width: 100%;
+			justify-content: space-between;
+		}
+	}
+	.article-content{
+		text-align: justify;
+		font-size: 0.71em;
+		h2{
+			font-size: 1.2em;
+		}
+	}
 }
 
 .article-player{
@@ -618,7 +759,19 @@
     height: 40px;
     align-items: center;
 	}
-
+	@media (max-width: 991px) and (min-width: 360px){
+		a{
+			height: 30px;
+			padding: 0px 5px;
+		}
+		font-size: 0.7em;
+		white-space: nowrap;
+	}
+	@media (max-width: 360px) {
+		li{
+			margin-bottom: 5px;
+		}
+	}
 }
 .facebook-bg{
 	$color: #3D71AA;
