@@ -1172,7 +1172,7 @@ body.nightmode{
 	$nightcolor: #333;
 	background-color: $nightcolor;
 	color: white;
-	.border-def, .header-top, #footer, .pagination-div .pagination li, .panel{
+	.border-def, .header-top, #footer, .pagination-div .pagination li, .panel, input.feedback-control{
 		border-color: darken($color-gray-1, 50%);
 	}
 	main, .header-top, .header-bottom .align-i-center li, .min-menu-header, .pagination-div .pagination li a{
@@ -1225,7 +1225,7 @@ body.nightmode{
 	.form-def .form-content, .fancybox-slide > *{
 		background-color: darken($color-gray-2, 40%);
 		color: white;
-		input, textarea{
+		input, textarea, .color-1{
 			color: white;
 		}
 	}
@@ -1233,7 +1233,7 @@ body.nightmode{
 	.logo-def{ display: none;}
 	.logo-nm{ display: block !important;}
 	.btn-def{
-		background-color: $color-3;
+		//background-color: $color-3;
 	}
 	.subscribe-form{
 		input{
@@ -1251,11 +1251,12 @@ body.nightmode{
 	}
 	//jplayer
 	.article-player .jp-interface{
-		background-color: $nightcolor;
+		//background-color: $nightcolor;
 	}
 	.jp-audio .jp-type-playlist .jp-time-holder{
 		color: #f11d54;
 	}
+
 	.article-player .jp-details, .article-player .jp-playlist, .jp-playlist li{
 		background-color: $nightcolor;
 		border-color: darken($color-gray-1, 50%);

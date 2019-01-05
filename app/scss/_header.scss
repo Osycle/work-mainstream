@@ -436,7 +436,7 @@ ul[class*="sub-menu"]{
 	position: fixed;
 	top: 0;
   height: $header-min-menu;
-  padding: 0 25px;
+  padding: 0 15px;
 	z-index: 100;
 	color: #333;
 	box-shadow: 0 0 20px 0 black;
@@ -447,6 +447,9 @@ ul[class*="sub-menu"]{
 	.min-menu-logo{
 		padding: 12px 0;
 		width: 100%;
+		.p-h-15{
+			padding-left: 0;
+		}
 		h1{
 			font-size: 25px;
 		}
@@ -463,6 +466,7 @@ ul[class*="sub-menu"]{
 		justify-content: flex-end;
 		display: flex;
 		.bar{
+			transform-origin: right;
 			transform: scale(0.8);
 		}
 	}

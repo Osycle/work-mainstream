@@ -66,6 +66,9 @@
 
 .footer-logo{
 	font-size: 11px;
+	@media (max-width: 991px) {
+		text-align: left;
+	}
 }
 
 

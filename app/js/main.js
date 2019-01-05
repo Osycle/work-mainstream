@@ -221,13 +221,13 @@
 	        freeScroll: false,
 	        pauseAutoPlayOnHover: true,
 	        arrowShape: arrowStyle,
-	        initialIndex: Math.round($(".short-partners-carousel .carousel-items figure").length / 2),
+	        initialIndex: 1,
 	        prevNextButtons: true,
 	        draggable: false,
 	        adaptiveHeight: true, 
 	        wrapAround: false,
 	        pageDots: false,
-	        contain: true,
+	        contain: !checkSm(),
 	        percentPosition: true,
 	        cellAlign: 'center'
 	      });
@@ -246,7 +246,7 @@
         adaptiveHeight: true, 
         wrapAround: false,
         pageDots: false,
-        contain: true,
+        contain: !checkSm(),
         percentPosition: true,
         cellAlign: 'center'
       });
