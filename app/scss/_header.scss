@@ -198,6 +198,15 @@ $header-min-menu: 70px;
     margin-top: 10px;
 	}
 }
+.header-fixed{
+	position: fixed;
+	top: 50px;
+	width: 100%;
+	z-index: 120;
+	.align-i-center{
+		background-color: lighten($color-gray-1, 10%);
+	}
+}
 .header-scroll{
 	// .header-top{
 	// 	transform-origin: 50% 0;
@@ -250,6 +259,15 @@ $header-min-menu: 70px;
 			&:nth-child(5){&:hover, &.active{&>a{background-color: $color-self;}}}
 			&:nth-child(6){&:hover, &.active{&>a{background-color: $color-health;}}}
 			&:nth-child(7){&:hover, &.active{&>a{background-color: $color-training;}}}
+
+			&:nth-child(1){.sub-menu-1{border-top: 4px solid $color-it;}}
+			&:nth-child(2){.sub-menu-1{border-top: 4px solid $color-career;}}
+			&:nth-child(3){.sub-menu-1{border-top: 4px solid $color-cybersport;}}
+			&:nth-child(4){.sub-menu-1{border-top: 4px solid $color-music;}}
+			&:nth-child(5){.sub-menu-1{border-top: 4px solid $color-self;}}
+			&:nth-child(6){.sub-menu-1{border-top: 4px solid $color-health;}}
+			&:nth-child(7){.sub-menu-1{border-top: 4px solid $color-training;}}
+
 			&:before{
 				@extend .claf;
 				background-color: $color-gray-1;
@@ -331,7 +349,7 @@ ul[class*="sub-menu"]{
 	opacity: 0;
 	font-size: 0.9em;
 	z-index: 2;
-	background-color: white;
+	background-color: lighten($color-gray-1, 10%);
 	a{
 		color: $color-gray-3;
 		&:before, &:after{
@@ -341,7 +359,7 @@ ul[class*="sub-menu"]{
 }
 .sub-menu-1{
 	white-space: normal;
-	padding: 3px 5px;
+	padding: 10px 20px;
 	transform: matrix(1,0,0,1,7,0);
 	transform-origin: 40% 0;
 	text-align: left;
@@ -351,11 +369,11 @@ ul[class*="sub-menu"]{
 	}
 	li{
 		font-size: em(15, 16);
-		border-bottom: 1px solid $color-gray-1;
+		border-bottom: 1px solid rgba($color-gray-1, 0.6);
 		//width: auto;
 		white-space: nowrap;
 		width: max-content;
-		min-width: 250px;
+		min-width: 180px;
 		width: 100%;
 		a{
 			display: block;
@@ -366,6 +384,9 @@ ul[class*="sub-menu"]{
 			border-bottom: 0;
 		}
 		&:hover{
+			a{
+				color: $color-1;
+			}
 			.sub-menu-2{
 				opacity: 1;
 				transform: none;transform: unset; 
