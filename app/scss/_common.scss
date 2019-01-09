@@ -1198,7 +1198,7 @@ body.nightmode{
 	.header-middle{
 		background-color: $nightcolor;
 	}
-	.header-bottom .align-i-center{ 
+	.header-bottom .align-i-center, .header-fixed{ 
 		background-color: darken($color-gray-1, 50%);
 		li{
 			border-color: darken($color-gray-2, 25%);

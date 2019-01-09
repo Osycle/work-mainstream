@@ -8151,13 +8151,13 @@ body.nightmode {
     background-color: transparent; }
   body.nightmode .header-middle {
     background-color: #333; }
-  body.nightmode .header-bottom .align-i-center {
+  body.nightmode .header-bottom .align-i-center, body.nightmode .header-fixed {
     background-color: #575757; }
-    body.nightmode .header-bottom .align-i-center li {
+    body.nightmode .header-bottom .align-i-center li, body.nightmode .header-fixed li {
       border-color: #4c4c4c; }
-    body.nightmode .header-bottom .align-i-center .sub-menu-1 {
+    body.nightmode .header-bottom .align-i-center .sub-menu-1, body.nightmode .header-fixed .sub-menu-1 {
       background-color: #575757; }
-      body.nightmode .header-bottom .align-i-center .sub-menu-1 a {
+      body.nightmode .header-bottom .align-i-center .sub-menu-1 a, body.nightmode .header-fixed .sub-menu-1 a {
         color: #b3b3b3; }
   body.nightmode .menu ul:not([class*="sub-menu"]) > li:before {
     background: #666666; }
@@ -8368,11 +8368,62 @@ body.nightmode {
 
 .header-fixed {
   position: fixed;
-  top: 50px;
+  top: 0;
   width: 100%;
-  z-index: 120; }
-  .header-fixed .align-i-center {
-    background-color: #f0f0f0; }
+  z-index: 120;
+  background-color: #f0f0f0; }
+  @media (max-width: 991px) {
+    .header-fixed {
+      display: none; } }
+  .header-fixed .nightmode-content {
+    font-size: 0.7em;
+    width: 170px; }
+  .header-fixed .search-nav-content {
+    padding-right: 1px; }
+  .header-fixed .menu li {
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+    font-size: 0.9em; }
+  .header-fixed .menu ul:not([class*="sub-menu"]) > li > a {
+    padding: 17px 20px; }
+  .header-fixed .search-nav-content {
+    height: 52px; }
+  .header-fixed .search-input button {
+    height: 52px;
+    right: 0; }
+  .header-fixed .search-input input {
+    position: absolute;
+    -webkit-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+    width: 140px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    opacity: 0;
+    right: 0;
+    border: 1px solid #d6d6d6;
+    pointer-events: none; }
+  .header-fixed .search-input:hover input {
+    opacity: 1;
+    pointer-events: auto; }
+
+.header-scroll.header-fixed {
+  -webkit-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%); }
+
+.header-scroll.scrolled {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1); }
 
 .menu {
   font-weight: 500;
@@ -8425,7 +8476,10 @@ body.nightmode {
         background-color: #d6d6d6;
         height: 30px;
         top: 11px;
+        left: -1px;
         width: 1px !important; }
+      .menu ul:not([class*="sub-menu"]) > li:hover:before {
+        background-color: transparent; }
       .menu ul:not([class*="sub-menu"]) > li:hover > a {
         color: white; }
       .menu ul:not([class*="sub-menu"]) > li:hover .sub-menu-1 {
@@ -8551,6 +8605,13 @@ ul[class*="sub-menu"] {
   -webkit-background-size: 600px 600px;
   background-size: 600px;
   background-position: right; }
+  #min-menu .search-nav-content {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 10px; }
+    #min-menu .search-nav-content input {
+      border: 1px solid #d6d6d6;
+      height: 40px !important; }
 
 .min-menu-lang li {
   text-decoration: underline; }
@@ -8618,6 +8679,9 @@ ul[class*="sub-menu"] {
 
 .min-phone {
   height: 70px; }
+
+.mm-navbar-size-2 {
+  height: 50px; }
 
 .mm-opening .min-menu-header {
   opacity: 0;
@@ -9412,6 +9476,20 @@ input.feedback-control {
 
 .tolike:not(.fixed) {
   display: none; }
+
+.tolike-notify {
+  background-color: #e17b31;
+  display: none;
+  padding: 10px 15px;
+  bottom: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  z-index: 130;
+  position: fixed;
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+  left: 50%; }
 
 .tolike.fixed {
   position: fixed;

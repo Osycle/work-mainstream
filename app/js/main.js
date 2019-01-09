@@ -90,11 +90,16 @@
 				title: "Меню"
 			},
 			navbars: [{
-					height: 0,
+					height: 2,
 					content: [
-						// '<div class="close-btn close-content bar">' +
-						// '<a  href="#page" ><span class="icon-bar"></span><span class="icon-bar"></span></a>' +
-						// '</div>'
+						'<div class="search-nav-content col-md-3 p-l-offset color-black">'+
+						  '<form method="post" action="http://demo.mainstream.uz/search.php">'+
+						    '<div class="col-md-12 search-input">'+
+						      '<input type="text" name="" id="" placeholder="Поиск" style="height: 35px;">'+
+						    	'<button type="submit"><i class="icm-magnifier"></i></button>'+
+						    '</div>'+
+						  '</form>'+
+						'</div>'
 					]
 				},
 				{
@@ -388,12 +393,12 @@
 		$(window).on("scroll", function(e) {
 
 			//Адаптация хедера при скролинге
-			if ($(window).scrollTop() > 100 && headerRange == false) {
+			if ($(window).scrollTop() > 300 && headerRange == false) {
 
 				headerRange = true;
 				if (minMenu) minMenu.addClass("scrolled").addClass("down");
 
-			} else if ($(window).scrollTop() < 100 && headerRange == true) {
+			} else if ($(window).scrollTop() < 300 && headerRange == true) {
 				headerRange = !true;
 				if (minMenu) minMenu.removeClass("scrolled");
 			}
@@ -441,7 +446,19 @@
 			$("#nightmode-check").trigger("change", jsonOptions.nightmode)
 		}
 
+		$(".tolike .btn-this").on("click", function(){
+			//$(this).closest(".tolike").before("<span class='tolike-notify'>Вам понравился этот пост</span>");
+			if( ($("#btn-like")[0].checked) )
+				return;
+			var that = $(this);
+			var notifyBox = that.closest(".tolike").find(".tolike-notify");
+			notifyBox.toggleClass("notifyed");
+			notifyBox.fadeIn();
+			setTimeout(function(){
+				notifyBox.fadeOut();
+			}, 3000)
 
+		})
 
 
 		//Preloader

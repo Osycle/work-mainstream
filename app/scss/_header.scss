@@ -199,36 +199,67 @@ $header-min-menu: 70px;
 	}
 }
 .header-fixed{
+	@media (max-width: 991px) {
+		display: none;
+	}
 	position: fixed;
-	top: 50px;
+	top: 0;
 	width: 100%;
 	z-index: 120;
-	.align-i-center{
 		background-color: lighten($color-gray-1, 10%);
+	.align-i-center{
 	}
+	.nightmode-content{
+		font-size: 0.7em;
+		width: 170px;
+	}
+	.search-nav-content{
+		padding-right: 1px;
+	}
+	.menu li{
+		transition: none;
+		font-size: 0.9em;
+	}
+	.menu ul:not([class*="sub-menu"]) > li > a{
+		padding: 17px 20px;
+	}
+	.search-nav-content{
+		height: 52px;
+	}
+	.search-input{
+		button{
+			height: 52px;
+			right: 0;
+		}
+		input{
+	  	position: absolute;
+    	transform: translateY(100%);
+    	width: 140px;
+    	transition: all 0.3s ease;
+    	opacity: 0;
+    	right: 0;
+    	border: 1px solid $color-gray-1;
+    	pointer-events: none;
+		}
+		&:hover{
+			input{
+				opacity: 1;
+				pointer-events: auto;
+			}
+		}
+	
+	}
+
 }
 .header-scroll{
-	// .header-top{
-	// 	transform-origin: 50% 0;
-	// }
-	// .header-top, .header-bottom, .header-top-content, .header-logo img{
-	// 	transition: all 0.5s ease; 	
-	// }
-	// &.scrolled, &.header-pages{
-	// 	.header-top{
-	// 		box-shadow: 0px 5px 20px -10px black;
-	// 		padding-bottom: 0;
-	// 	}
-	// 	.header-top-content{
-	// 		height: 0;
-	// 	}
-	// 	.header-bottom{
-	// 		box-shadow: 0px 5px 20px -10px black;
-	// 		.align-i-center{
-	// 			transform: translate(-50%, 0);
-	// 		}
-	// 	}
-	// }
+	&.header-fixed{
+		transform-origin: 50% 0;
+		transition: all 0.5s ease;
+		transform: translateY(-100%);
+	}	
+	&.scrolled{
+		transform: scale(1);
+	}
 }
 
 .menu{
@@ -273,9 +304,13 @@ $header-min-menu: 70px;
 				background-color: $color-gray-1;
 				height: 30px;
 				top: 11px;
+				left:-1px;
 				width: 1px !important;
 			}
 			&:hover{
+				&:before{
+					background-color: transparent;
+				}
 				&>a{
 					color: white;
 				}
@@ -437,6 +472,15 @@ ul[class*="sub-menu"]{
 	//background-color: $color-1;
 	background-size: 600px;
 	background-position: right;
+	.search-nav-content{
+		padding-left: 30px;
+		padding-right: 30px;
+		margin-top: 10px;
+		input{
+			border: 1px solid $color-gray-1;
+			height: 40px !important;
+		}
+	}
 }
 .min-menu-lang{
 	li{
@@ -495,6 +539,9 @@ ul[class*="sub-menu"]{
 }
 .min-phone{
 	height: $header-min-menu;
+}
+.mm-navbar-size-2{
+	height: 50px;
 }
 .mm-navbars-top{
 	//background-color: #333;
