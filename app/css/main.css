@@ -9169,6 +9169,9 @@ input.feedback-control {
   .weekarticles.p-b-30 {
     padding-bottom: 0; } }
 
+.weekarticles a[data-fancybox] {
+  display: inline-block; }
+
 .weekarticles-nav {
   padding: 18px 30px; }
   @media (max-width: 991px) {
@@ -9522,6 +9525,8 @@ input.feedback-control {
 
 .rubric-article {
   padding: 20px 30px; }
+  .rubric-article a[data-fancybox] {
+    display: inline-block; }
   @media (max-width: 991px) {
     .rubric-article {
       padding: 20px 10px; }
@@ -9828,6 +9833,29 @@ input.feedback-control {
 .reg-form .iwho-content input:checked + label .btn-opacity {
   background-color: #b92048;
   color: white; }
+
+@media (min-width: 991px) {
+  .personalarea .user-detail .viewnamefile {
+    width: 260px; } }
+
+@media (max-width: 991px) {
+  .personalarea .user-detail .flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; } }
+
+.viewnamefile {
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; }
+
+.bloggercover-img {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 120px; }
 
 .blogger-face .blogger-face-content {
   background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.4)), color-stop(35%, #f1f1f1), to(rgba(255, 255, 255, 0)));

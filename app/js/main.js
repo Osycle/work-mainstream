@@ -509,9 +509,32 @@
 
 
 
-
-
-
+	/*Обложки картин*/
+	if( $("#bloggercover").length != 0 )
+	$("#bloggercover").on("change", function(e){
+		//console.log(this);
+		var file = this.files[0];
+		var out = "";
+		var reader = new FileReader();
+		reader.onload = function(e){
+			var result = e.target.result;
+			if( $(".bloggercover-img").length != 0 )
+				$(".bloggercover-img")[0].src = result;
+		};
+		reader.readAsDataURL(file);
+	})
+if( $("#useravatar").length != 0 )
+	$("#useravatar").on("change", function(e){
+		var file = this.files[0];
+		var out = "";
+		var reader = new FileReader();
+		reader.onload = function(e){
+			var result = e.target.result;
+			if( $(".useravatar-img").length != 0 )
+				$(".useravatar-img")[0].style.backgroundImage = "url('"+result+"')";
+		};
+		reader.readAsDataURL(file);
+	})
 
 
 

@@ -250,6 +250,9 @@
 			padding-bottom: 0;
 		}
 	}
+	a[data-fancybox]{
+		display: inline-block;
+	}
 }
 .weekarticles-nav{
 	padding: 18px 30px;
@@ -662,6 +665,9 @@
 
 //rubric-article
 .rubric-article{
+	a[data-fancybox]{
+		display: inline-block;
+	}
 	padding: 20px 30px;	
 	@media (max-width: 991px) {
 		padding: 20px 10px;
@@ -1035,9 +1041,6 @@
 
 
 .reg-form{
-	.viewnamefile{
-
-	}
 	.iwho-content{
 		input{
 			&:checked{
@@ -1051,6 +1054,31 @@
 		}
 	}
 }
+.personalarea{
+	.user-detail{
+		.viewnamefile{
+			@media (min-width: 991px) {
+				width: 260px;
+			}
+		}
+		@media (max-width: 991px) {
+			.flex{
+				flex-direction: column;
+			}
+		}
+	}
+}
+.viewnamefile{
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.bloggercover-img{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	height: 120px;
+}
+
 //bloggers-article
 .blogger-face{
 	.blogger-face-content{
