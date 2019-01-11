@@ -10525,9 +10525,7 @@ html .fancybox-show-thumbs .fancybox-thumbs {
 
 @media (max-width: 767px) {
   html body {
-    font-size: 14px; }
-  h1, h2, h3 {
-    white-space: pre-wrap; } }
+    font-size: 14px; } }
 
 @media only screen and (max-width: 480px) {
   html body {
