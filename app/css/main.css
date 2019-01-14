@@ -9549,6 +9549,9 @@ input.feedback-control {
       .rubric-article .article-content h2 {
         font-size: 1.2em; } }
 
+[data-fancybox][data-src='#form-signin'] {
+  display: inline-block; }
+
 .article-player .jp-audio, .article-player .jp-audio-stream, .article-player .jp-video {
   border: none; }
 

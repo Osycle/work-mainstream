@@ -689,7 +689,9 @@
 		}
 	}
 }
-
+[data-fancybox][data-src='#form-signin']{
+	display: inline-block;
+}
 .article-player{
 	.jp-audio, .jp-jplayer{
 		//width: 100%;
