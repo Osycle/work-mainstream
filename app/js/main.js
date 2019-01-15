@@ -446,19 +446,20 @@
 			$("#nightmode-check").trigger("change", jsonOptions.nightmode)
 		}
 
-		$(".tolike .btn-this").on("click", function(){
+		/*Смайлить*/
+		$(".tolike.fixed .btn-this").on("click", function(){
 			//$(this).closest(".tolike").before("<span class='tolike-notify'>Вам понравился этот пост</span>");
-			if( ($("#btn-like")[0].checked) )
-				return;
 			var that = $(this);
+			var inputCheck = $(this).closest(".tolike").find(".btn-like-input")[0];	
 			var notifyBox = that.closest(".tolike").find(".tolike-notify");
-			notifyBox.toggleClass("notifyed");
-			notifyBox.fadeIn();
-			setTimeout(function(){
-				notifyBox.fadeOut();
-			}, 3000)
-
-		})
+			if( !(inputCheck.checked) ){
+				notifyBox.addClass("notifyed");
+				notifyBox.fadeIn();
+				setTimeout(function(){
+					notifyBox.fadeOut();
+				}, 2250)
+			}
+		});
 
 
 		//Preloader

@@ -378,6 +378,9 @@
 .tags-content{
 	padding: 30px 20px;
 	padding-top: 20px;
+	@media (max-width: 991px) {
+		padding: 30px 35px;
+	}
 }
 .tags{
 	position: relative;
@@ -410,6 +413,7 @@
 			}
 			@media (max-width: 991px) {
 				text-align: left;
+				padding: 0 40px;
 			}
 		}
 	}
@@ -613,9 +617,9 @@
 
 
 .tolike{
-	&:not(.fixed){
-		display: none;
-	}
+	// &:not(.fixed){
+	// 	display: none;
+	// }
 }
 .tolike-notify{
 	background-color: $color-4;
@@ -769,7 +773,7 @@
 		}
 	}
 }
-#btn-like{
+.btn-like-input{
 	& ~ .btn-like{
 		.icm-smiling{
 			display: none;
@@ -785,6 +789,11 @@
 			}	
 
 		}
+	}
+}
+.tolike-article{
+	@media (max-width: 991px) {
+		display: none;
 	}
 }
 .btn-like{

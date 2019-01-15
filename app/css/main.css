@@ -9281,6 +9281,9 @@ input.feedback-control {
 .tags-content {
   padding: 30px 20px;
   padding-top: 20px; }
+  @media (max-width: 991px) {
+    .tags-content {
+      padding: 30px 35px; } }
 
 .tags {
   position: relative; }
@@ -9310,7 +9313,8 @@ input.feedback-control {
           -webkit-font-smoothing: antialiased; } }
     @media (max-width: 991px) and (max-width: 991px) {
       .tags .tags-li {
-        text-align: left; } }
+        text-align: left;
+        padding: 0 40px; } }
 
 .bar-advertising-content .img-content {
   -webkit-transition: 0.4s;
@@ -9477,9 +9481,6 @@ input.feedback-control {
   .weekarticles-items .img-content .img, .news-items .img-content .img, .popular-articles-items .img-content .img {
     height: 180px; } }
 
-.tolike:not(.fixed) {
-  display: none; }
-
 .tolike-notify {
   background-color: #e17b31;
   display: none;
@@ -9611,14 +9612,18 @@ input.feedback-control {
 .article-buttons .tags-li li {
   margin-top: 0; }
 
-#btn-like ~ .btn-like .icm-smiling {
+.btn-like-input ~ .btn-like .icm-smiling {
   display: none; }
 
-#btn-like:checked ~ .btn-like .icm-smiling {
+.btn-like-input:checked ~ .btn-like .icm-smiling {
   display: block; }
 
-#btn-like:checked ~ .btn-like .icm-smile {
+.btn-like-input:checked ~ .btn-like .icm-smile {
   display: none; }
+
+@media (max-width: 991px) {
+  .tolike-article {
+    display: none; } }
 
 .btn-like {
   background-color: #FFC928; }
