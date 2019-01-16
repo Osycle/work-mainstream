@@ -8472,6 +8472,8 @@ body.nightmode {
         border-top: 4px solid #80c52c; }
       .menu ul:not([class*="sub-menu"]) > li:nth-child(7) .sub-menu-1 {
         border-top: 4px solid #f66729; }
+      .menu ul:not([class*="sub-menu"]) > li:nth-child(1):before {
+        display: none; }
       .menu ul:not([class*="sub-menu"]) > li:before {
         background-color: #d6d6d6;
         height: 30px;
@@ -8926,6 +8928,21 @@ input.feedback-control {
 /*
 	_content.css
 */
+body[data-aos-easing] {
+  display: block !important; }
+
+.info-gray {
+  color: #8c8c8c; }
+
+.info-yellow {
+  color: #a9a914; }
+
+.info-error {
+  color: red; }
+
+.info-success {
+  color: green; }
+
 .ls-icon {
   background-position: center;
   -webkit-background-size: contain;
@@ -10032,7 +10049,10 @@ input.feedback-control {
 .btn-addarticle {
   background-color: #4d9e35; }
   .btn-addarticle [class*="icm"] {
-    font-size: 20px; }
+    font-size: 22px; }
+  .btn-addarticle a {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important; }
 
 .btn-myarticles {
   background-color: #3d7dae; }

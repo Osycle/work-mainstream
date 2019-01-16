@@ -1,6 +1,21 @@
 /*
 	_content.css
 */
+body[data-aos-easing]{
+	display: block !important;
+}
+.info-gray{
+	color: $color-gray-2;
+}
+.info-yellow{
+	color: #a9a914;
+}
+.info-error{
+	color: red;
+}
+.info-success{
+	color: green;
+}
 
 .ls-icon{
 	background-position: center;
@@ -1260,7 +1275,11 @@
 .btn-addarticle{
 	background-color: #4d9e35;
 	[class*="icm"]{
-		font-size: 20px;
+		font-size: 22px;
+	}
+	a{
+		padding-top: 5px !important;
+		padding-bottom: 5px !important;
 	}
 }
 .btn-myarticles{

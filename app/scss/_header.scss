@@ -299,6 +299,11 @@ $header-min-menu: 70px;
 			&:nth-child(6){.sub-menu-1{border-top: 4px solid $color-health;}}
 			&:nth-child(7){.sub-menu-1{border-top: 4px solid $color-training;}}
 
+			&:nth-child(1){
+				&:before{
+					display: none;
+				}	
+			}
 			&:before{
 				@extend .claf;
 				background-color: $color-gray-1;
