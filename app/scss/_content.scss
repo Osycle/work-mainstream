@@ -4,17 +4,50 @@
 body[data-aos-easing]{
 	display: block !important;
 }
-.info-gray{
-	color: $color-gray-2;
+[class*="infonotify-"]{
+	padding: 15px 15px;
+	border: 1px solid;
+	margin-bottom: 5px;
+	color: rgba(black, 1);
+	display: block;
+	&:before{
+		@extend .fa;
+		display: inline-block;
+		position: absolute;
+		text-align: center;
+		width: 20px;
+		top: 50%;
+		transform: translateY(-50%);
+    margin-left: -30px;
+	}
+	@media (min-width: 992px) {
+		padding-left: 45px;
+	}
+	@media (max-width: 991px) {
+		&:before{
+			display: none;			
+		}
+	}
 }
-.info-yellow{
-	color: #a9a914;
+.infonotify-info{
+	background-color: rgba(gray, 0.3);
+	border-color: rgba(gray, 0.4);
+	@extend .fa-info;
 }
-.info-error{
-	color: red;
+.infonotify-attention{
+	background-color: rgba(yellow, 0.3);
+	border-color: rgba(yellow, 0.4);
+	@extend .fa-warning;
 }
-.info-success{
-	color: green;
+.infonotify-error{
+	background-color: rgba(red, 0.3);
+	border-color: rgba(red, 0.4);
+	@extend .fa-ban;
+}
+.infonotify-success{
+	background-color: rgba(green, 0.3);
+	border-color: rgba(green, 0.4);
+	@extend .fa-thumbs-o-up;
 }
 
 .ls-icon{

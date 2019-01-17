@@ -401,7 +401,7 @@ template {
  */
 /* FONT PATH
  * -------------------------- */
-.fa {
+.fa, [class*="infonotify-"]:before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -467,10 +467,10 @@ template {
 .fa-pull-right {
   float: right; }
 
-.fa.fa-pull-left {
+.fa.fa-pull-left, .fa-pull-left[class*="infonotify-"]:before {
   margin-right: .3em; }
 
-.fa.fa-pull-right {
+.fa.fa-pull-right, .fa-pull-right[class*="infonotify-"]:before {
   margin-left: .3em; }
 
 /* Deprecated as of 4.4.0 */
@@ -480,10 +480,10 @@ template {
 .pull-left {
   float: left; }
 
-.fa.pull-left {
+.fa.pull-left, .pull-left[class*="infonotify-"]:before {
   margin-right: .3em; }
 
-.fa.pull-right {
+.fa.pull-right, .pull-right[class*="infonotify-"]:before {
   margin-left: .3em; }
 
 .fa-spin {
@@ -849,7 +849,7 @@ template {
 .fa-check-circle-o:before {
   content: "\f05d"; }
 
-.fa-ban:before {
+.fa-ban:before, .infonotify-error:before {
   content: "\f05e"; }
 
 .fa-arrow-left:before {
@@ -901,7 +901,7 @@ template {
 .fa-eye-slash:before {
   content: "\f070"; }
 
-.fa-warning:before,
+.fa-warning:before, .infonotify-attention:before,
 .fa-exclamation-triangle:before {
   content: "\f071"; }
 
@@ -967,7 +967,7 @@ template {
 .fa-comments:before {
   content: "\f086"; }
 
-.fa-thumbs-o-up:before {
+.fa-thumbs-o-up:before, .infonotify-success:before {
   content: "\f087"; }
 
 .fa-thumbs-o-down:before {
@@ -1404,7 +1404,7 @@ template {
 .fa-question:before {
   content: "\f128"; }
 
-.fa-info:before {
+.fa-info:before, .infonotify-info:before {
   content: "\f129"; }
 
 .fa-exclamation:before {
@@ -7284,12 +7284,6 @@ table {
 .bg-color-special-1 {
   background-color: #2e1c11; }
 
-.info-success {
-  color: #3da835; }
-
-.info-error {
-  color: red; }
-
 .text-indent {
   text-indent: 30px; }
 
@@ -8013,7 +8007,7 @@ hr {
 
 .control-content {
   position: relative; }
-  .control-content .fa {
+  .control-content .fa, .control-content [class*="infonotify-"]:before {
     z-index: 1;
     font-size: 16px;
     color: #8c8c8c;
@@ -8799,7 +8793,7 @@ textarea.form-control {
 .search-nav-content, .input-btnin {
   position: relative;
   color: #1ca19c; }
-  .search-nav-content .fa, .search-nav-content .icm-magnifier, .input-btnin .fa, .input-btnin .icm-magnifier {
+  .search-nav-content .fa, .search-nav-content [class*="infonotify-"]:before, .search-nav-content .icm-magnifier, .input-btnin .fa, .input-btnin [class*="infonotify-"]:before, .input-btnin .icm-magnifier {
     color: white;
     font-size: 18px; }
   .search-nav-content .search-input, .input-btnin .search-input {
@@ -8931,17 +8925,44 @@ input.feedback-control {
 body[data-aos-easing] {
   display: block !important; }
 
-.info-gray {
-  color: #8c8c8c; }
+[class*="infonotify-"] {
+  padding: 15px 15px;
+  border: 1px solid;
+  margin-bottom: 5px;
+  color: black;
+  display: block; }
+  [class*="infonotify-"]:before {
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+    width: 20px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-left: -30px; }
+  @media (min-width: 992px) {
+    [class*="infonotify-"] {
+      padding-left: 45px; } }
+  @media (max-width: 991px) {
+    [class*="infonotify-"]:before {
+      display: none; } }
 
-.info-yellow {
-  color: #a9a914; }
+.infonotify-info {
+  background-color: rgba(128, 128, 128, 0.3);
+  border-color: rgba(128, 128, 128, 0.4); }
 
-.info-error {
-  color: red; }
+.infonotify-attention {
+  background-color: rgba(255, 255, 0, 0.3);
+  border-color: rgba(255, 255, 0, 0.4); }
 
-.info-success {
-  color: green; }
+.infonotify-error {
+  background-color: rgba(255, 0, 0, 0.3);
+  border-color: rgba(255, 0, 0, 0.4); }
+
+.infonotify-success {
+  background-color: rgba(0, 128, 0, 0.3);
+  border-color: rgba(0, 128, 0, 0.4); }
 
 .ls-icon {
   background-position: center;
@@ -9823,7 +9844,7 @@ body[data-aos-easing] {
   padding: 0; }
   .faq-accordion .panel-heading h4 {
     text-transform: none; }
-  .faq-accordion .panel-heading .fa {
+  .faq-accordion .panel-heading .fa, .faq-accordion .panel-heading [class*="infonotify-"]:before {
     position: absolute;
     right: 15px;
     -webkit-transform: rotate(180deg);
@@ -9839,7 +9860,7 @@ body[data-aos-easing] {
     .faq-accordion .panel-heading a:not(.collapsed) {
       color: white;
       background-color: #b92048; }
-      .faq-accordion .panel-heading a:not(.collapsed) .fa {
+      .faq-accordion .panel-heading a:not(.collapsed) .fa, .faq-accordion .panel-heading a:not(.collapsed) [class*="infonotify-"]:before {
         -webkit-transform: scale(1);
         -ms-transform: scale(1);
         transform: scale(1); }
@@ -12216,12 +12237,6 @@ img[auto] {
 
 .opacity-10 {
   opacity: 1; }
-
-.info-success {
-  color: #3da835; }
-
-.info-error {
-  color: red; }
 
 @media (max-width: 767px) {
   [align="right"], [align="left"] {
