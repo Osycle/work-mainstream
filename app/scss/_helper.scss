@@ -169,7 +169,7 @@ html{
 /* figure margin */
 @for $i from 0 through 12 {
 	.figure-m-v-#{5*$i} { 
-		figure{
+		figure, .boxes-cell{
 			margin-top: 5*$i+px;
 			margin-bottom: 5*$i+px;
 		}
@@ -177,7 +177,7 @@ html{
 }
 @for $i from 0 through 12 {
 	.figure-m-h-#{5*$i} { 
-	figure{
+	figure, .boxes-cell{
 			margin-left: 5*$i+px;
 			margin-right: 5*$i+px;
 		}

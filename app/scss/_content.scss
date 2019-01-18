@@ -7,9 +7,11 @@ body[data-aos-easing]{
 [class*="infonotify-"]{
 	padding: 15px 15px;
 	border: 1px solid;
+	margin-top: 5px;
 	margin-bottom: 5px;
 	color: rgba(black, 1);
-	display: block;
+	float: left;
+	width: 100%;
 	&:before{
 		@extend .fa;
 		display: inline-block;
@@ -30,23 +32,23 @@ body[data-aos-easing]{
 	}
 }
 .infonotify-info{
-	background-color: rgba(gray, 0.3);
-	border-color: rgba(gray, 0.4);
+	background-color: #d9d9d9;
+	border-color: #b5b5b5;
 	@extend .fa-info;
 }
 .infonotify-attention{
-	background-color: rgba(yellow, 0.3);
-	border-color: rgba(yellow, 0.4);
+	background-color: #ffffb2;
+	border-color: #cccc44;
 	@extend .fa-warning;
 }
 .infonotify-error{
-	background-color: rgba(red, 0.3);
-	border-color: rgba(red, 0.4);
+	background-color: #ffb2b2;
+	border-color: #ff6b6b;
 	@extend .fa-ban;
 }
 .infonotify-success{
-	background-color: rgba(green, 0.3);
-	border-color: rgba(green, 0.4);
+	background-color: #b2d9b2;
+	border-color: #6bb56b;
 	@extend .fa-thumbs-o-up;
 }
 
@@ -732,6 +734,8 @@ body[data-aos-easing]{
 		}
 	}
 	.article-content{
+		margin-top: 10px;
+		margin-bottom: 10px;
 		@media (max-width: 991px) {
 			text-align: justify;
 			font-size: 0.71em;
@@ -1286,7 +1290,7 @@ body[data-aos-easing]{
 }
 .user-btns{
 	.btn-def{
-		width: 170px;
+		width: 100%;
 		&:hover{
 			background-color: $color-gray-2;
 		}

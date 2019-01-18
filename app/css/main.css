@@ -7333,7 +7333,7 @@ table {
   letter-spacing: -5px; }
   .boxes-1 * {
     letter-spacing: 0; }
-  .boxes-1 figure {
+  .boxes-1 figure, .boxes-1 .boxes-cell {
     display: inline-block;
     vertical-align: top; }
   .boxes-1:not(.serried) {
@@ -7350,7 +7350,7 @@ table {
   letter-spacing: -5px; }
   .boxes-2 * {
     letter-spacing: 0; }
-  .boxes-2 figure {
+  .boxes-2 figure, .boxes-2 .boxes-cell {
     display: inline-block;
     vertical-align: top; }
   .boxes-2:not(.serried) {
@@ -7367,7 +7367,7 @@ table {
   letter-spacing: -5px; }
   .boxes-3 * {
     letter-spacing: 0; }
-  .boxes-3 figure {
+  .boxes-3 figure, .boxes-3 .boxes-cell {
     display: inline-block;
     vertical-align: top; }
   .boxes-3:not(.serried) {
@@ -7384,7 +7384,7 @@ table {
   letter-spacing: -5px; }
   .boxes-4 * {
     letter-spacing: 0; }
-  .boxes-4 figure {
+  .boxes-4 figure, .boxes-4 .boxes-cell {
     display: inline-block;
     vertical-align: top; }
   .boxes-4:not(.serried) {
@@ -7401,7 +7401,7 @@ table {
   letter-spacing: -5px; }
   .boxes-5 * {
     letter-spacing: 0; }
-  .boxes-5 figure {
+  .boxes-5 figure, .boxes-5 .boxes-cell {
     display: inline-block;
     vertical-align: top; }
   .boxes-5:not(.serried) {
@@ -7418,7 +7418,7 @@ table {
   letter-spacing: -5px; }
   .boxes-6 * {
     letter-spacing: 0; }
-  .boxes-6 figure {
+  .boxes-6 figure, .boxes-6 .boxes-cell {
     display: inline-block;
     vertical-align: top; }
   .boxes-6:not(.serried) {
@@ -7490,7 +7490,7 @@ table {
     letter-spacing: -5px; }
     .boxes-6 *, .boxes-5 *, .boxes-4 * {
       letter-spacing: 0; }
-    .boxes-6 figure, .boxes-5 figure, .boxes-4 figure {
+    .boxes-6 figure, .boxes-6 .boxes-cell, .boxes-5 figure, .boxes-5 .boxes-cell, .boxes-4 figure, .boxes-4 .boxes-cell {
       display: inline-block;
       vertical-align: top; }
     .boxes-6:not(.serried), .boxes-5:not(.serried), .boxes-4:not(.serried) {
@@ -7516,7 +7516,7 @@ table {
     letter-spacing: -5px; }
     .boxes-4 * {
       letter-spacing: 0; }
-    .boxes-4 figure {
+    .boxes-4 figure, .boxes-4 .boxes-cell {
       display: inline-block;
       vertical-align: top; }
     .boxes-4:not(.serried) {
@@ -7542,7 +7542,7 @@ table {
     letter-spacing: -5px; }
     .boxes-6 *, .boxes-5 *, .boxes-4 *, .boxes-3 * {
       letter-spacing: 0; }
-    .boxes-6 figure, .boxes-5 figure, .boxes-4 figure, .boxes-3 figure {
+    .boxes-6 figure, .boxes-6 .boxes-cell, .boxes-5 figure, .boxes-5 .boxes-cell, .boxes-4 figure, .boxes-4 .boxes-cell, .boxes-3 figure, .boxes-3 .boxes-cell {
       display: inline-block;
       vertical-align: top; }
     .boxes-6:not(.serried), .boxes-5:not(.serried), .boxes-4:not(.serried), .boxes-3:not(.serried) {
@@ -7568,7 +7568,7 @@ table {
     letter-spacing: -5px; }
     .boxes-6 *, .boxes-5 *, .boxes-4 *, .boxes-3 *, .boxes-2 * {
       letter-spacing: 0; }
-    .boxes-6 figure, .boxes-5 figure, .boxes-4 figure, .boxes-3 figure, .boxes-2 figure {
+    .boxes-6 figure, .boxes-6 .boxes-cell, .boxes-5 figure, .boxes-5 .boxes-cell, .boxes-4 figure, .boxes-4 .boxes-cell, .boxes-3 figure, .boxes-3 .boxes-cell, .boxes-2 figure, .boxes-2 .boxes-cell {
       display: inline-block;
       vertical-align: top; }
     .boxes-6:not(.serried), .boxes-5:not(.serried), .boxes-4:not(.serried), .boxes-3:not(.serried), .boxes-2:not(.serried) {
@@ -8407,9 +8407,11 @@ body.nightmode {
   -webkit-transform-origin: 50% 0;
   -ms-transform-origin: 50% 0;
   transform-origin: 50% 0;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
   -webkit-transform: translateY(-100%);
   -ms-transform: translateY(-100%);
   transform: translateY(-100%); }
@@ -8928,9 +8930,11 @@ body[data-aos-easing] {
 [class*="infonotify-"] {
   padding: 15px 15px;
   border: 1px solid;
+  margin-top: 5px;
   margin-bottom: 5px;
   color: black;
-  display: block; }
+  float: left;
+  width: 100%; }
   [class*="infonotify-"]:before {
     display: inline-block;
     position: absolute;
@@ -8949,20 +8953,20 @@ body[data-aos-easing] {
       display: none; } }
 
 .infonotify-info {
-  background-color: rgba(128, 128, 128, 0.3);
-  border-color: rgba(128, 128, 128, 0.4); }
+  background-color: #d9d9d9;
+  border-color: #b5b5b5; }
 
 .infonotify-attention {
-  background-color: rgba(255, 255, 0, 0.3);
-  border-color: rgba(255, 255, 0, 0.4); }
+  background-color: #ffffb2;
+  border-color: #cccc44; }
 
 .infonotify-error {
-  background-color: rgba(255, 0, 0, 0.3);
-  border-color: rgba(255, 0, 0, 0.4); }
+  background-color: #ffb2b2;
+  border-color: #ff6b6b; }
 
 .infonotify-success {
-  background-color: rgba(0, 128, 0, 0.3);
-  border-color: rgba(0, 128, 0, 0.4); }
+  background-color: #b2d9b2;
+  border-color: #6bb56b; }
 
 .ls-icon {
   background-position: center;
@@ -9581,12 +9585,15 @@ body[data-aos-easing] {
         -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
         justify-content: space-between; } }
-  @media (max-width: 991px) {
-    .rubric-article .article-content {
-      text-align: justify;
-      font-size: 0.71em; }
-      .rubric-article .article-content h2 {
-        font-size: 1.2em; } }
+  .rubric-article .article-content {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+    @media (max-width: 991px) {
+      .rubric-article .article-content {
+        text-align: justify;
+        font-size: 0.71em; }
+        .rubric-article .article-content h2 {
+          font-size: 1.2em; } }
 
 [data-fancybox][data-src='#form-signin'] {
   display: inline-block; }
@@ -10049,7 +10056,7 @@ body[data-aos-easing] {
     background-size: contain; } }
 
 .user-btns .btn-def {
-  width: 170px; }
+  width: 100%; }
   .user-btns .btn-def:hover {
     background-color: #8c8c8c; }
   @media (max-width: 991px) {
@@ -11213,107 +11220,107 @@ html .p-0 {
   margin-bottom: 20px; }
 
 /* figure margin */
-.figure-m-v-0 figure {
+.figure-m-v-0 figure, .figure-m-v-0 .boxes-cell {
   margin-top: 0px;
   margin-bottom: 0px; }
 
-.figure-m-v-5 figure {
+.figure-m-v-5 figure, .figure-m-v-5 .boxes-cell {
   margin-top: 5px;
   margin-bottom: 5px; }
 
-.figure-m-v-10 figure {
+.figure-m-v-10 figure, .figure-m-v-10 .boxes-cell {
   margin-top: 10px;
   margin-bottom: 10px; }
 
-.figure-m-v-15 figure {
+.figure-m-v-15 figure, .figure-m-v-15 .boxes-cell {
   margin-top: 15px;
   margin-bottom: 15px; }
 
-.figure-m-v-20 figure {
+.figure-m-v-20 figure, .figure-m-v-20 .boxes-cell {
   margin-top: 20px;
   margin-bottom: 20px; }
 
-.figure-m-v-25 figure {
+.figure-m-v-25 figure, .figure-m-v-25 .boxes-cell {
   margin-top: 25px;
   margin-bottom: 25px; }
 
-.figure-m-v-30 figure {
+.figure-m-v-30 figure, .figure-m-v-30 .boxes-cell {
   margin-top: 30px;
   margin-bottom: 30px; }
 
-.figure-m-v-35 figure {
+.figure-m-v-35 figure, .figure-m-v-35 .boxes-cell {
   margin-top: 35px;
   margin-bottom: 35px; }
 
-.figure-m-v-40 figure {
+.figure-m-v-40 figure, .figure-m-v-40 .boxes-cell {
   margin-top: 40px;
   margin-bottom: 40px; }
 
-.figure-m-v-45 figure {
+.figure-m-v-45 figure, .figure-m-v-45 .boxes-cell {
   margin-top: 45px;
   margin-bottom: 45px; }
 
-.figure-m-v-50 figure {
+.figure-m-v-50 figure, .figure-m-v-50 .boxes-cell {
   margin-top: 50px;
   margin-bottom: 50px; }
 
-.figure-m-v-55 figure {
+.figure-m-v-55 figure, .figure-m-v-55 .boxes-cell {
   margin-top: 55px;
   margin-bottom: 55px; }
 
-.figure-m-v-60 figure {
+.figure-m-v-60 figure, .figure-m-v-60 .boxes-cell {
   margin-top: 60px;
   margin-bottom: 60px; }
 
-.figure-m-h-0 figure {
+.figure-m-h-0 figure, .figure-m-h-0 .boxes-cell {
   margin-left: 0px;
   margin-right: 0px; }
 
-.figure-m-h-5 figure {
+.figure-m-h-5 figure, .figure-m-h-5 .boxes-cell {
   margin-left: 5px;
   margin-right: 5px; }
 
-.figure-m-h-10 figure {
+.figure-m-h-10 figure, .figure-m-h-10 .boxes-cell {
   margin-left: 10px;
   margin-right: 10px; }
 
-.figure-m-h-15 figure {
+.figure-m-h-15 figure, .figure-m-h-15 .boxes-cell {
   margin-left: 15px;
   margin-right: 15px; }
 
-.figure-m-h-20 figure {
+.figure-m-h-20 figure, .figure-m-h-20 .boxes-cell {
   margin-left: 20px;
   margin-right: 20px; }
 
-.figure-m-h-25 figure {
+.figure-m-h-25 figure, .figure-m-h-25 .boxes-cell {
   margin-left: 25px;
   margin-right: 25px; }
 
-.figure-m-h-30 figure {
+.figure-m-h-30 figure, .figure-m-h-30 .boxes-cell {
   margin-left: 30px;
   margin-right: 30px; }
 
-.figure-m-h-35 figure {
+.figure-m-h-35 figure, .figure-m-h-35 .boxes-cell {
   margin-left: 35px;
   margin-right: 35px; }
 
-.figure-m-h-40 figure {
+.figure-m-h-40 figure, .figure-m-h-40 .boxes-cell {
   margin-left: 40px;
   margin-right: 40px; }
 
-.figure-m-h-45 figure {
+.figure-m-h-45 figure, .figure-m-h-45 .boxes-cell {
   margin-left: 45px;
   margin-right: 45px; }
 
-.figure-m-h-50 figure {
+.figure-m-h-50 figure, .figure-m-h-50 .boxes-cell {
   margin-left: 50px;
   margin-right: 50px; }
 
-.figure-m-h-55 figure {
+.figure-m-h-55 figure, .figure-m-h-55 .boxes-cell {
   margin-left: 55px;
   margin-right: 55px; }
 
-.figure-m-h-60 figure {
+.figure-m-h-60 figure, .figure-m-h-60 .boxes-cell {
   margin-left: 60px;
   margin-right: 60px; }
 

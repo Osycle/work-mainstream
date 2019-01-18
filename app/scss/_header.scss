@@ -206,7 +206,7 @@ $header-min-menu: 70px;
 	top: 0;
 	width: 100%;
 	z-index: 120;
-		background-color: lighten($color-gray-1, 10%);
+	background-color: lighten($color-gray-1, 10%);
 	.align-i-center{
 	}
 	.nightmode-content{
@@ -254,7 +254,7 @@ $header-min-menu: 70px;
 .header-scroll{
 	&.header-fixed{
 		transform-origin: 50% 0;
-		transition: all 0.5s ease;
+		transition: transform 0.5s ease;
 		transform: translateY(-100%);
 	}	
 	&.scrolled{
