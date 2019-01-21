@@ -44,6 +44,7 @@
 				thumbs : {
 					autoStart   : true
 				},
+				touch : false,
 				transitionDuration : 366,
 				transitionEffect: "zoom-in-out"
 			});
