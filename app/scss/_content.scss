@@ -203,7 +203,7 @@ body[data-aos-easing]{
     	transition: all 0.8s ease;
 		}
 	}
-	figure{
+	figure, .boxes-cell{
 		@media (min-width: 992px){&:nth-child(1){.img{height: 440px;}}}
 		@media (max-width: 991px){&:nth-child(1){.img{height: 300px;}}}
 
@@ -282,7 +282,7 @@ body[data-aos-easing]{
 
 	}
 	.weekarticles-items{
-		figure{
+		figure, .boxes-cell{
 			transition: all 0.3s ease;
 			filter: contrast(95%);
 			&.is-selected, &:hover{
@@ -342,7 +342,7 @@ body[data-aos-easing]{
 	}
 }
 .weekarticles-items{
-	figure{
+	figure, .boxes-cell{
 		transition: all 0.3s ease;
 		filter: contrast(95%);
 		&.is-selected, &:hover{
@@ -504,7 +504,7 @@ body[data-aos-easing]{
 }
 .popular-articles-items{
 
-	figure{
+	figure, .boxes-cell{
 		transition: all 0.3s ease;
 		filter: contrast(95%);
 		&:hover{
@@ -517,7 +517,7 @@ body[data-aos-easing]{
 		background-position: center;
 	}
 	@media (max-width: 991px) {
-		figure{
+		figure, .boxes-cell{
 			text-align: left;
 		}
 		.desc-content{
@@ -535,7 +535,7 @@ body[data-aos-easing]{
 			margin-bottom: 0;
 		}
 	}
-	figure{
+	figure, .boxes-cell{
 		transition: 0.3s;
 		&:hover{
 			h4{
@@ -581,7 +581,7 @@ body[data-aos-easing]{
 
 //news-items
 .news-items{
-	figure{
+	figure, .boxes-cell{
 		vertical-align: top;
 		&:hover{
 			h4{
@@ -1023,7 +1023,7 @@ body[data-aos-easing]{
 	.weekarticles-items{
 		margin-left: -10px;
 		margin-right: -10px;
-		figure{
+		figure, .boxes-cell{
 			position: relative;
 			padding-left: 10px;
 			padding-right: 10px;
@@ -1044,7 +1044,7 @@ body[data-aos-easing]{
 
 .short-popular{
 	.recomended-items{
-		figure:nth-child(1){
+		figure:nth-child(1), .boxes-cell:nth-child(1){
 			.img{
 				height: 210px;
 			}
