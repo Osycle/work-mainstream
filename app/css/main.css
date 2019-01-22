@@ -9910,6 +9910,10 @@ body[data-aos-easing] {
   margin-bottom: 10px;
   height: 120px; }
 
+.inputHidden {
+  height: 0;
+  opacity: 0; }
+
 .blogger-face .blogger-face-content {
   background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.4)), color-stop(35%, #f1f1f1), to(rgba(255, 255, 255, 0)));
   background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.4), #f1f1f1 35%, rgba(255, 255, 255, 0));
