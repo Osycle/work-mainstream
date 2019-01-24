@@ -4,6 +4,9 @@
 body[data-aos-easing]{
 	display: block !important;
 }
+iframe{
+	overflow: hidden !important;
+}
 [class*="infonotify-"]{
 	padding: 15px 15px;
 	border: 1px solid;
@@ -191,6 +194,9 @@ body[data-aos-easing]{
 	pointer-events: none;
 }
 
+.column-left{
+	@extend .clearfix;
+}
 
 .recomended-items{
 	margin-left: -10px;
@@ -1143,6 +1149,7 @@ body[data-aos-easing]{
 }
 .inputHidden{
 	height: 0;
+	position: absolute;
   opacity: 0;
 }
 
