@@ -122,9 +122,18 @@
 					<!-- search -->
 					<div class="search-nav-content col-md-2 p-l-offset color-black">
 					  <form action="">
-					    <div class="col-md-12 search-input">
+					    <div class="col-md-12 search-input hide">
+					      <input type="text" name="" placeholder="Поиск">
 					    	<button type="submit"><i class="icm-magnifier"></i></button>
-					      <input type="text" name="" placeholder="Поиск" style="height: 35px;">
+					    </div>
+					    <div class="search-input-content">
+					      <input type="checkbox" name="" id="search_status" class='none'>
+					      <div class="shadow-wrapper"></div>
+					    	<label for="search_status" role="button"><i class="fa icm-magnifier"></i><i class="fa fa-close"></i></label>
+					    	<div class="input-box">
+					      	<input type="text" name="" class="search-input" placeholder="Поиск">
+					      	<button type="submit">Найти</button>
+					    	</div>
 					    </div>
 					  </form>
 					</div>
@@ -236,7 +245,7 @@
 						<div class="search-nav-content col-md-3 p-l-offset color-black">
 						  <form action="">
 						    <div class="col-md-12 search-input">
-						      <input type="text" name="" placeholder="Поиск" style="height: 35px;">
+						      <input type="text" name="" placeholder="Поиск">
 						    	<button type="submit"><i class="icm-magnifier"></i></button>
 						    </div>
 						  </form>

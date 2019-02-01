@@ -207,14 +207,13 @@ $header-min-menu: 70px;
 	width: 100%;
 	z-index: 120;
 	background-color: lighten($color-gray-1, 10%);
-	.align-i-center{
-	}
 	.nightmode-content{
 		font-size: 0.7em;
 		width: 170px;
 	}
 	.search-nav-content{
 		padding-right: 1px;
+		height: 52px;
 	}
 	.menu li{
 		transition: none;
@@ -223,10 +222,8 @@ $header-min-menu: 70px;
 	.menu ul:not([class*="sub-menu"]) > li > a{
 		padding: 17px 20px;
 	}
-	.search-nav-content{
-		height: 52px;
-	}
 	.search-input{
+		width: 300px;
 		button{
 			height: 52px;
 			right: 0;
@@ -249,8 +246,90 @@ $header-min-menu: 70px;
 		}
 	
 	}
+	.search-nav-content, .input-btnin{
+		position: relative;
+		.fa{
+			color: white;
+			font-size: 20px;
+		}
+		.search-input-content{
+			width: 55px;
+			height: 52px;
+			margin-left: auto;
+			position: relative;
+		}
+		#search_status{
+			&:checked{
+				& ~ [for="search_status"]{
+					.fa-close{
+						display: block;
+					}
+					.fa-search, .icm-magnifier{
+						display: none;
+					}
 
+				}
+				& ~ .input-box{
+					display: block;
+				}
+			}
+		}
+		.input-box{
+	    display: none;
+	    z-index: 3;
+	    position: absolute;
+	    right: 50px;
+	    height: 52px;
+	    top: 50%;
+	    transform: translate(0, -50%);
+		}
+		.shadow-wrapper{
+			display: none;
+			width: 150vw;
+			z-index: 3;
+			height: 150vh;
+			background: rgba(black, 0.4);
+			position: absolute;
+			left: -100vw;
+		}
+		.search-input{
+			border: 1px solid $color-gray-1;
+	    padding: 5px 15px;
+	    height: 100%;
+		}
+		.fa-close{
+			display: none;
+		}
+		input{
+			@include placeholder-color($color-gray-2);
+		}
+		label{
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: $color-1;
+		}
+		button{
+			background-color: $color-1;
+			color: white;
+			width: 60px;
+	    padding: 5px 10px;
+	    position: absolute;
+		  font-size: 1em;
+	    top: 0;
+	    right: 0px;
+	    height: 100%;
+	    transition: filter 0.3s ease;
+	    border: 0;
+	    &:active{
+	    	filter: brightness(80%);
+	    }
+		}
+	}
 }
+
 .header-scroll{
 	&.header-fixed{
 		transform-origin: 50% 0;
@@ -705,16 +784,14 @@ textarea.form-control{
 	}
 	input{
 		border: 0;
-		height: 52px !important;
 		transition: all 0.3s ease;
 		background-color: rgba(white, 1);
-		height: 100%;
+		height: 50px;
 		width: 100%;
 		padding: 0 15px;
 		//&:focus{
 			& ~ button{
 				right: 0;
-				color: $color-1 !important;
 			}
 		//}
 		@include placeholder-color($color-gray-2);
