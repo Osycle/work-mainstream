@@ -423,14 +423,14 @@ html{
 /* ---- .grid-item ---- */
 
 .grid-img-item {
-  width: (100/5)+%;
+  width: (100/5)#{"%"};
   float:left;
   img{
   	width: 100%;
   }
 }
 .grid-img-sizer{
-	width: (100/4)+%;
+	width: (100/4)#{"%"};
 }
 .grid-img-item {
   //float: left;

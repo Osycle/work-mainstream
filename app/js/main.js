@@ -405,16 +405,6 @@
 			}
 		});
 
-		$(window).on("mousewheel", function(event) {
-			if (!headerRange) return;
-			if (event.originalEvent.wheelDelta >= 0) {
-				minMenu.removeClass("up");
-			} else {
-				minMenu.addClass("up");
-			}
-		});
-
-
 
 		/*nightmode*/
 		$("#nightmode-check").on("change", function( e, bool ){

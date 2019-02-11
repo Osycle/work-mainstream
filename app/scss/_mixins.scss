@@ -76,18 +76,18 @@
 		vertical-align: top;
 	}
 	&:not(.serried){
-		margin-left: -+($mrow)+%;
-		margin-right: -+( $mrow )+%;
+		margin-left: -+($mrow)#{"%"};
+		margin-right: -+( $mrow )#{"%"};
 	}
 	&:not(.serried){
 		#{$tag}, .boxes-cell{
-			margin-left:  ($mrow)+%;
-			margin-right:  ($mrow)+%;
-			width: $wid+%;
+			margin-left:  ($mrow)#{"%"};
+			margin-right:  ($mrow)#{"%"};
+			width: $wid#{"%"};
 		}
 	}
 	#{$tag}, .boxes-cell{
-		width: (100/$items)+%;
+		width: (100/$items)#{"%"};
 	}
 
 
@@ -100,7 +100,7 @@
 		padding-left: 15px;
 		padding-right: 15px;
 		float: left;
-		width: (100/$items)+%;
+		width: (100/$items)#{"%"};
 	}
 
 }
