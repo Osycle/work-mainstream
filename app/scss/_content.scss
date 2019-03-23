@@ -116,6 +116,7 @@ iframe{
 	@media (max-width: 991px) {
 
 	}
+	font-size: 13px;
 }
 .date{
 	font-size: 12px;
@@ -312,19 +313,23 @@ iframe{
 }
 .weekarticles-nav{
 	padding: 18px 30px;
-	@media (max-width: 991px) {
-		padding: 18px 50px;
+
+	//@media (max-width: 991px) {
+		padding: 18px 35px;
 		font-size: 0.9em;
 		.flickity-viewport{
-			background-color: lighten($color-gray-1, 8%);
+			background-color: lighten($color-gray-1, 10%);
+			height: 35px !important;
 		}
 		.item{
-			line-height: 35px;
+			line-height: 30px;
 		}
 		&.flickity-btn-1{
 			.flickity-prev-next-button{
-				width: 42px !important;
-				border: 1px solid $color-1;
+				width: 35px !important;
+				height: 35.4px;
+				//border: 1px solid $color-1;
+				background-color: lighten($color-gray-1, 6%);
 				&:hover{
 					background-color: $color-1;
 					.arrow{
@@ -332,19 +337,25 @@ iframe{
 					}
 				}
 				svg{
-					width: 20px;
+					width: 15px;
 	    		left: 50%;
 	    		transform: translateX(-50%);
 				}
 			}
 		}
-	}
+
+
+
+
 	a{
 		display: block;
 		padding: 3px 10px;
 	}
 	.is-selected{
-		color: $color-1;
+		a{
+			color: white;
+			background-color: $color-1;
+		}
 	}
 }
 .weekarticles-items{
@@ -1166,7 +1177,7 @@ iframe{
 //bloggers-article
 .blogger-face{
 	.blogger-face-content{
-		background: linear-gradient(to right, rgba(#000, 0.4 )-20%, #f1f1f1 35%, rgba(#fff, 0.0) ) ;
+		background: linear-gradient(to right, rgba(#000, 0.4 ) 20%, #f1f1f1 35%, rgba(#fff, 0.0) ) ;
 		.align-i-center{
 			height: 260px;
 			.text-center{

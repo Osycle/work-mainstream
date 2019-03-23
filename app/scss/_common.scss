@@ -35,6 +35,7 @@ $color-music: #cf256a;
 $color-self: #7915e6;
 $color-health: #80c52c;
 $color-training: #f66729;
+$color-movie: #81532E;
 
 .color-it{color: $color-it;}
 .color-career{color: $color-career;}
@@ -43,6 +44,7 @@ $color-training: #f66729;
 .color-self{color: $color-self;}
 .color-health{color: $color-health;}
 .color-training{color: $color-training;}
+.color-movie{color: $color-movie;}
 
 .bg-color-it{background-color: $color-it;}
 .bg-color-career{background-color: $color-career;}
@@ -51,8 +53,9 @@ $color-training: #f66729;
 .bg-color-self{background-color: $color-self;}
 .bg-color-health{background-color: $color-health;}
 .bg-color-training{background-color: $color-training;}
+.bg-color-movie{background-color: $color-movie;}
 
-.bg-color-it, .bg-color-career, .bg-color-cybersport, .bg-color-music, .bg-color-self, .bg-color-health, .bg-color-training{
+.bg-color-it, .bg-color-career, .bg-color-cybersport, .bg-color-music, .bg-color-self, .bg-color-health, .bg-color-training, .bg-color-movie{
 	color: white;
 	padding-top: 2px;
 	padding-bottom: 2px;
@@ -987,7 +990,11 @@ main{
 		line-height: 100%;
 	}
 
-
+	figure, .boxes-cell{
+		h3, h4{
+			font-size: em(15, 15);
+		}
+	}
 
 }
 hr{

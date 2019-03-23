@@ -209,7 +209,7 @@ $header-min-menu: 70px;
 	background-color: lighten($color-gray-1, 10%);
 	.nightmode-content{
 		font-size: 0.7em;
-		width: 170px;
+		width: 215px;
 	}
 	.search-nav-content{
 		padding-right: 1px;
@@ -362,21 +362,23 @@ $header-min-menu: 70px;
 				position: relative;
 
 			}
-			&:nth-child(1){&:hover, &.active{&>a{background-color: $color-it;}}}
-			&:nth-child(2){&:hover, &.active{&>a{background-color: $color-career;}}}
-			&:nth-child(3){&:hover, &.active{&>a{background-color: $color-cybersport;}}}
-			&:nth-child(4){&:hover, &.active{&>a{background-color: $color-music;}}}
-			&:nth-child(5){&:hover, &.active{&>a{background-color: $color-self;}}}
-			&:nth-child(6){&:hover, &.active{&>a{background-color: $color-health;}}}
-			&:nth-child(7){&:hover, &.active{&>a{background-color: $color-training;}}}
+			&:nth-child(8n+1){&:hover, &.active{&>a{background-color: $color-it;}}}
+			&:nth-child(8n+2){&:hover, &.active{&>a{background-color: $color-career;}}}
+			&:nth-child(8n+3){&:hover, &.active{&>a{background-color: $color-cybersport;}}}
+			&:nth-child(8n+4){&:hover, &.active{&>a{background-color: $color-music;}}}
+			&:nth-child(8n+5){&:hover, &.active{&>a{background-color: $color-self;}}}
+			&:nth-child(8n+6){&:hover, &.active{&>a{background-color: $color-health;}}}
+			&:nth-child(8n+7){&:hover, &.active{&>a{background-color: $color-training;}}}
+			&:nth-child(8n+8){&:hover, &.active{&>a{background-color: $color-movie;}}}
 
-			&:nth-child(1){.sub-menu-1{border-top: 4px solid $color-it;}}
-			&:nth-child(2){.sub-menu-1{border-top: 4px solid $color-career;}}
-			&:nth-child(3){.sub-menu-1{border-top: 4px solid $color-cybersport;}}
-			&:nth-child(4){.sub-menu-1{border-top: 4px solid $color-music;}}
-			&:nth-child(5){.sub-menu-1{border-top: 4px solid $color-self;}}
-			&:nth-child(6){.sub-menu-1{border-top: 4px solid $color-health;}}
-			&:nth-child(7){.sub-menu-1{border-top: 4px solid $color-training;}}
+			&:nth-child(8n+1){.sub-menu-1{border-top: 4px solid $color-it;}}
+			&:nth-child(8n+2){.sub-menu-1{border-top: 4px solid $color-career;}}
+			&:nth-child(8n+3){.sub-menu-1{border-top: 4px solid $color-cybersport;}}
+			&:nth-child(8n+4){.sub-menu-1{border-top: 4px solid $color-music;}}
+			&:nth-child(8n+5){.sub-menu-1{border-top: 4px solid $color-self;}}
+			&:nth-child(8n+6){.sub-menu-1{border-top: 4px solid $color-health;}}
+			&:nth-child(8n+7){.sub-menu-1{border-top: 4px solid $color-training;}}
+			&:nth-child(8n+8){.sub-menu-1{border-top: 4px solid $color-movie;}}
 
 			&:nth-child(1){
 				&:before{
