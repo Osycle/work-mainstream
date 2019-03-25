@@ -323,11 +323,19 @@ iframe{
 		}
 		.item{
 			line-height: 30px;
+			border-right: 1px solid $color-gray-1;
+			font-size: 0.97em;
+			&:last-child{
+				border-right: 0;
+			}
+			a{
+				//padding-left: 1px;
+			}
 		}
 		&.flickity-btn-1{
 			.flickity-prev-next-button{
 				width: 35px !important;
-				height: 35.4px;
+				height: 35.9px;
 				//border: 1px solid $color-1;
 				background-color: lighten($color-gray-1, 6%);
 				&:hover{

@@ -107,32 +107,34 @@ $header-min-menu: 70px;
 //.nightmode-content
 .nightmode-switch{
 	border-radius: 30px;
-	background-color: $color-gray-1;
+	background-color: #e7e7e7;
 	width: 32px;
 	position: relative;
 	height: 15px;
-	box-shadow: inset 0 0 5px -2px black;
+	//box-shadow: inset 0 0 5px -2px black;
 	label{
 		width: 100%;
     height: 100%;
 	}
 	.circle-btn{
-		width: 15px;
-		background-color: $color-gray-3;
-		height: 15px;
+		width: 17px;
+		background-color: white;
+		height: 17px;
 		position: absolute;
 		display: inline-block;
 		border-radius: 50%;
 		box-shadow: 0 0 7px -2px black;
 		transition: all 0.3s ease;
 		left: 0;
+		top: -1px;
 	}
 	input:checked{
 		& ~ label{
+			//background-color: $color-1;
 			.circle-btn{
 				left: 100%;
 				transform: translateX(-100%);
-				background-color: $color-1;
+				//background-color: $color-1;
 			}
 		}
 	}
@@ -140,8 +142,13 @@ $header-min-menu: 70px;
 		.circle-btn{
 			left: 100%;
 			transform: translateX(-100%);
-			background-color: $color-1;
+			//background-color: $color-1;
 		}
+	}
+}
+body.nightmode{
+	.nightmode-switch{
+		background-color: $color-1;
 	}
 }
 .header-socicons{

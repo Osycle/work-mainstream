@@ -245,7 +245,7 @@
         //groupCells: 3,
         freeScroll: false,
         pauseAutoPlayOnHover: true,
-        arrowShape: arrowStyle,
+        arrowShape: "M 20,50 L 55,80 L 70,90 L 70,50  L 70,10 L 55,20 Z",
         initialIndex: 0,
         prevNextButtons: true,
         draggable: false,

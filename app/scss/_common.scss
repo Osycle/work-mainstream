@@ -1265,5 +1265,21 @@ body.nightmode{
 			color: white !important;
 		}
 	}
+	.weekarticles-nav{
+		.flickity-prev-next-button{
+			background-color: lighten($nightcolor, 10%);
+		}
+		.flickity-viewport{
+			background-color: darken($color-gray-1, 50%);
+			.item{
+				border-color: lighten($nightcolor, 10%);
+				&:hover{
+					a{
+						color: white;
+					}
+				}
+			}
+		}
+	}
 	
 }
