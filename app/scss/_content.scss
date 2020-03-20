@@ -1389,3 +1389,141 @@ iframe{
 		min-width: 100%
 	}
 }
+
+// Правки 20.03.2020
+$border-radius-def: 0.7em;
+.wrapper{
+	border-radius: $border-radius-def;
+	overflow: hidden;
+}
+.img{
+	overflow: hidden;
+	border-radius: $border-radius-def;
+}
+.secti{
+	border-radius: $border-radius-def;
+}
+.btn-def, 
+.btn-opacity, .reg-link{
+	border-radius: $border-radius-def;
+	overflow: hidden;
+}
+
+.weekarticles-nav{
+	padding: 0;
+	margin-top: 7px;
+	margin-bottom: 7px;
+	border-radius: $border-radius-def;
+	overflow: hidden;
+	.item.is-selected{
+		overflow: hidden;
+		border-radius: $border-radius-def;
+	}
+}
+.header-bottom .align-i-center{
+	border-radius: $border-radius-def;
+	//overflow: hidden;
+	.menu{
+		li{
+			&.active{
+				&:before{
+					display: none;
+				}
+			}
+			a{
+				border-radius: 0.4em;
+				overflow: hidden;
+			}
+		}
+	}
+}
+.header-middle-content{
+	[target="_blank"]	{
+		img{
+			border-radius: $border-radius-def;
+		}
+	}
+}
+html .search-nav-content{
+	input{
+		border-radius: 0.5em;
+		height: 40px;
+	}
+	.search-input{
+		display: flex;
+	}
+	button{
+		position: relative;
+		background-color: transparent;
+		.icm-magnifier{
+			color: #696969;
+		}
+	}
+}
+.pagination-div .pagination li{
+	border-radius: 0.4em;
+}
+.pie-form-control{
+	border-radius: 0.4em;
+}
+.border-def{
+	border-radius: 0.4em;
+}
+.btn-def:not([class*="p-h"]){
+	label[for]{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+.reg-form, #addcover{
+	.btn-def{
+		min-width: 120px;
+	}
+	@media (min-width: 992px){
+		.btn-def:not(.m-l-offset).block{
+			border-radius: 0 0.4em 0.4em 0;
+		}
+	}
+	.border-def{
+		min-height: 40px;
+		border-radius: 0.4em 0 0 0.4em;
+	}
+}
+body{
+	background-image: url('../img/bg-page.jpg');
+	background-position: top;
+	background-size: 100%;
+	background-repeat: repeat-y;
+}
+.header-middle{
+	background-color: transparent;
+}
+.weekarticles, .popular-articles, .short-news{
+	background-color: white;
+	padding: 30px;
+	box-shadow: 0 0 50px 0px rgba(black, 0.1);
+	border-radius: 0.7em;
+}
+.tags{
+	li{
+		border-radius: 0.3em;
+	}
+}
+.menu ul:not([class*="sub-menu"]) > li a{
+	border-radius: 0.5em;
+}
+.sub-menu-1{
+	border-radius: 0.5em 0.5em;
+}
+body.nightmode{
+	background-image: url('../img/bg-page-dark.jpg');
+	.weekarticles, .popular-articles, .short-news{
+		background-color: #333;
+	}
+}
+
+.user-detail{
+	.flex{
+		justify-content: space-between;
+	}
+}
